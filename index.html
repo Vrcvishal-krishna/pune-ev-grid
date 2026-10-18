@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pune & PCMC City-Wide EV Charging Telemetry Monitor</title>
+  <link rel="stylesheet" href="leaflet.css" />
+  <script src="leaflet.js"></script>
+  <script src="leaflet-heat.js"></script>
+  <style>
+    /* TECHNICAL OPERATIONS DASHBOARD - STRICT SHARP EDGES (NO ROUNDED CORNERS) */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0px !important;
+    }
+
+    body {
+      background-color: #060b18;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, monospace;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 16px 20px;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: #091326;
+      border: 1px solid #162c52;
+      border-left: 4px solid #00e5ff;
+      margin-bottom: 16px;
+    }
+
+    .dashboard-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-live {
+      background: #00e5ff18;
+      border: 1px solid #00e5ff;
+      color: #00e5ff;
+      font-size: 11px;
+      padding: 3px 8px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background-color: #00e5ff;
+      box-shadow: 0 0 8px #00e5ff;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: monospace;
+      color: #8da2c0;
+    }
+
+    .btn-action {
+      background: #0d1e3d;
+      border: 1px solid #23457a;
+      color: #72d9ff;
+      padding: 6px 14px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-action:hover {
+      background: #00e5ff;
+      color: #060b18;
+      border-color: #00e5ff;
+    }
+
+    /* GLOBAL HERO SEARCH BAR */
+    .search-hero-bar {
+      background: #091326;
+      border: 1px solid #162c52;
+      border-left: 4px solid #00ffd5;
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .search-hero-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .global-search-input {
+      background: #050f24;
+      border: 1px solid #23457a;
+      color: #ffffff;
+      padding: 9px 14px;
+      font-size: 13px;
+      font-family: monospace;
+      font-weight: 600;
+      width: 100%;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .global-search-input:focus {
+      border-color: #00ffd5;
+      box-shadow: 0 0 10px rgba(0, 255, 213, 0.25);
+    }
+
+    .global-search-input::placeholder {
+      color: #5d7599;
+      font-weight: 500;
+    }
+
+    .btn-clear-search {
+      background: #142747;
+      border: 1px solid #23457a;
+      color: #8da2c0;
+      padding: 9px 16px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: monospace;
+      white-space: nowrap;
+    }
+
+    .btn-clear-search:hover {
+      background: #ef4444;
+      color: #ffffff;
+      border-color: #ef4444;
+    }
+
+    .search-status-tag {
+      font-size: 11px;
+      font-family: monospace;
+      color: #00ffd5;
+      white-space: nowrap;
+    }
+
+    /* TOP SUMMARY STATS ROW */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .stat-card {
+      background: #091326;
+      border: 1px solid #162c52;
+      padding: 12px 16px;
+      position: relative;
+    }
+
+    .stat-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #1b3866;
+    }
+
+    .stat-card.highlight::after { background: #00e5ff; }
+    .stat-card.alert::after { background: #00ffd5; }
+
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #788fae;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      font-family: monospace;
+    }
+
+    .stat-sub {
+      font-size: 11px;
+      color: #00ffd5;
+      margin-top: 4px;
+      font-family: monospace;
+    }
+
+    /* MAIN GRID LAYOUT */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1.85fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .panel {
+      background: #091326;
+      border: 1px solid #162c52;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #c9d8ee;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #142747;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* TABLE TOOLBAR */
+    .table-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      background: #0d1e3d;
+      border: 1px solid #1c3b6b;
+      color: #8da2c0;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      cursor: pointer;
+      font-family: monospace;
+    }
+
+    .filter-tab.active {
+      background: #00e5ff;
+      color: #060b18;
+      border-color: #00e5ff;
+    }
+
+    .search-input {
+      background: #050f24;
+      border: 1px solid #1c3b6b;
+      color: #ffffff;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-family: monospace;
+      outline: none;
+      width: 220px;
+    }
+
+    .search-input:focus {
+      border-color: #00e5ff;
+    }
+
+    /* TELEMETRY TABLE */
+    .table-container {
+      overflow-x: auto;
+      max-height: 290px;
+    }
+
+    .telem-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 11.5px;
+      font-family: monospace;
+    }
+
+    .telem-table th {
+      background: #0d1a33;
+      color: #55e6c1;
+      padding: 8px 10px;
+      border: 1px solid #19335c;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .telem-table td {
+      padding: 7px 10px;
+      border: 1px solid #142747;
+      color: #d1dced;
+    }
+
+    .telem-table tr:nth-child(even) { background: #0a162b; }
+    .telem-table tr:hover { background: #112547; }
+
+    .status-pill {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border: 1px solid;
+    }
+
+    .status-charging { background: #093444; border-color: #00e5ff; color: #00e5ff; }
+    .status-available { background: #0c3325; border-color: #10b981; color: #34d399; }
+    .status-nodata { background: #111a2e; border-color: #2a3d5e; color: #94a3b8; }
+    .status-offline { background: #3b111a; border-color: #ef4444; color: #f87171; }
+
+    /* FUNNEL */
+    .wait-box-hero {
+      background: #050f24;
+      border: 1px solid #16315c;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wait-hero-title {
+      color: #8da2c0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .wait-hero-val {
+      color: #00e5ff;
+      font-size: 22px;
+      font-weight: 800;
+      font-family: monospace;
+    }
+
+    .funnel-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .funnel-bar {
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      font-size: 11px;
+      font-family: monospace;
+      color: #ffffff;
+      border: 1px solid #163663;
+      transition: width 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    /* BOTTOM ROW */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1.85fr 1fr;
+      gap: 16px;
+    }
+
+    .gauges-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .gauge-card {
+      background: #071021;
+      border: 1px solid #14284d;
+      padding: 12px 6px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gauge-svg { width: 100px; height: 60px; }
+    .gauge-label { font-size: 10px; text-transform: uppercase; color: #7d96b8; margin-top: 6px; letter-spacing: 0.5px; }
+    .gauge-value-text { font-size: 14px; font-weight: 700; color: #00ffd5; font-family: monospace; }
+    .chart-svg { width: 100%; height: 190px; }
+
+    .donut-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .donut-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 10px;
+      font-family: monospace;
+      max-height: 140px;
+      overflow-y: auto;
+    }
+
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+    .legend-color { width: 8px; height: 8px; border: 1px solid; }
+
+    /* GEOGRAPHIC CONSUMPTION & DEMAND HEATMAP */
+    .map-panel {
+      margin-bottom: 16px;
+      background: #091326;
+      border: 1px solid #142747;
+      padding: 12px 16px;
+      width: 100%;
+      box-sizing: border-box;
+      clear: both;
+    }
+
+    .map-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .corridor-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .map-corridor-btn {
+      background: #0a1730;
+      border: 1px solid #1c3866;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: monospace;
+      padding: 4px 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .map-corridor-btn:hover, .map-corridor-btn.active {
+      background: #00ff8815;
+      border-color: #00ff88;
+      color: #00ff88;
+    }
+
+    .map-layer-toggles {
+      display: flex;
+      gap: 8px;
+    }
+
+    .map-toggle-btn {
+      background: #0a1730;
+      border: 1px solid #1c3866;
+      color: #cbd5e1;
+      font-size: 11px;
+      font-family: monospace;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+
+    .map-toggle-btn.active {
+      background: #00e5ff18;
+      border-color: #00e5ff;
+      color: #00e5ff;
+    }
+
+    #pune-map-view {
+      width: 100%;
+      min-height: 520px;
+      height: 520px;
+      background: #060b18;
+      border: 1px solid #162c52;
+      position: relative;
+    }
+
+    .leaflet-container {
+      background: #060b18 !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace !important;
+    }
+
+    .map-legend-box {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(6, 11, 24, 0.94);
+      border: 1px solid #1c3866;
+      border-left: 3px solid #00ff88;
+      padding: 10px 14px;
+      z-index: 1000;
+      font-family: monospace;
+      font-size: 11px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+      pointer-events: auto;
+    }
+
+    .map-legend-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .map-legend-dot {
+      width: 12px;
+      height: 12px;
+      border: 1px solid rgba(255,255,255,0.4);
+      display: inline-block;
+    }
+
+    .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+      background: #091326 !important;
+      color: #e2e8f0 !important;
+      border: 1px solid #00ff8888 !important;
+      border-radius: 0px !important;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.9) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DASHBOARD HEADER -->
+  <header class="dashboard-header">
+    <div class="dashboard-title">
+      <span>PUNE &amp; PCMC EV CHARGING TELEMETRY MONITOR</span>
+      <span class="badge-live"><span class="pulse-dot"></span> 257 HUBS (1,094 SOCKETS)</span>
+    </div>
+    <div class="header-controls">
+      <span>REFRESH: <span id="last-sync">--:--:--</span></span>
+      <button class="btn-action" onclick="refreshData()">REFRESH TELEMETRY</button>
+    </div>
+  </header>
+
+  <!-- TOP SUMMARY STATS BAR -->
+  <section class="stats-bar">
+    <div class="stat-card highlight">
+      <div class="stat-label">Total Connected Sockets</div>
+      <div class="stat-value" id="val-total-guns">--</div>
+      <div class="stat-sub" id="sub-total-guns">257 Hubs across Pune &amp; PCMC</div>
+    </div>
+    <div class="stat-card alert">
+      <div class="stat-label">Active Occupancy</div>
+      <div class="stat-value" id="val-active-charging">--</div>
+      <div class="stat-sub" id="sub-active-charging">Syncing City Grid...</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Energy Dispensed (24H)</div>
+      <div class="stat-value" id="val-energy">--</div>
+      <div class="stat-sub" id="sub-energy">Total Dispensed Today (City Engine)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Avg. Session Duration</div>
+      <div class="stat-value" id="val-avg-duration">--</div>
+      <div class="stat-sub" id="sub-avg-duration">Across Completed City Sessions</div>
+    </div>
+  </section>
+
+  <!-- GLOBAL STATION SEARCH BAR (ROAD EXPLORATION) -->
+  <div class="search-hero-bar">
+    <div class="search-hero-wrapper">
+      <span style="font-size: 16px;">🔍</span>
+      <input 
+        type="text" 
+        id="global-station-search" 
+        class="global-search-input" 
+        placeholder="SEARCH ANY STATION NAME, ROAD, OR AREA (e.g. Shell Kasarsai, Social Street, Hinjewadi, Wakad, Seasons Mall, Hyatt, AP81)..." 
+        oninput="handleGlobalSearch(this.value)"
+      />
+      <button class="btn-clear-search" onclick="clearGlobalSearch()">✖ CLEAR</button>
+    </div>
+    <div id="search-status-tag" class="search-status-tag">Searching all 257 hubs (1,094 sockets)</div>
+  </div>
+
+  <!-- MAIN MONITORING GRID -->
+  <div class="dashboard-grid">
+
+    <!-- PANEL 1: TREND GRAPH -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>City-Wide Load Trend (Past 24 Hours)</span>
+        <span id="trend-badge" style="color: #00ffd5; font-family: monospace; font-size: 11px;">24H GRID LOAD</span>
+      </div>
+      <div id="trend-chart-container">
+        <svg class="chart-svg" id="trend-svg" viewBox="0 0 320 180">
+          <line x1="30" y1="20" x2="310" y2="20" stroke="#122547" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="30" y1="60" x2="310" y2="60" stroke="#122547" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="30" y1="100" x2="310" y2="100" stroke="#122547" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="30" y1="140" x2="310" y2="140" stroke="#142747" stroke-width="1"/>
+          <text x="5" y="24" fill="#607699" font-size="8" font-family="monospace">100%</text>
+          <text x="10" y="64" fill="#607699" font-size="8" font-family="monospace">60%</text>
+          <text x="10" y="104" fill="#607699" font-size="8" font-family="monospace">30%</text>
+          <text x="15" y="144" fill="#607699" font-size="8" font-family="monospace">0%</text>
+          <g id="trend-line-group"></g>
+          <g id="trend-axis-labels"></g>
+        </svg>
+      </div>
+      <div id="trend-summary-text" style="font-size: 11px; color: #8298b8; font-family: monospace; margin-top: 8px;">
+        Polling real-time socket states across 257 stations in Pune &amp; PCMC...
+      </div>
+    </div>
+
+    <!-- PANEL 2: CITY-WIDE PORT MATRIX -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>Mapped Sockets Matrix</span>
+        <span id="table-hubs-badge" style="color: #55e6c1; font-family: monospace; font-size: 11px;">257 HUBS (1,094 PORTS)</span>
+      </div>
+      
+      <!-- FILTER TOOLBAR -->
+      <div class="table-toolbar">
+        <div class="filter-tabs">
+          <button class="filter-tab active" onclick="setFilter('ALL', this)">ALL (<span id="count-all">1094</span>)</button>
+          <button class="filter-tab" onclick="setFilter('CHARGING', this)">⚡ CHARGING (<span id="count-charging">0</span>)</button>
+          <button class="filter-tab" onclick="setFilter('TATA POWER', this)">⚡ TATA POWER</button>
+          <button class="filter-tab" onclick="setFilter('JIO-BP', this)">⚡ JIO-BP PULSE</button>
+          <button class="filter-tab" onclick="setFilter('CHARGEZONE', this)">CHARGEZONE</button>
+          <button class="filter-tab" onclick="setFilter('STATIQ', this)">STATIQ</button>
+          <button class="filter-tab" onclick="setFilter('GOEGO', this)">GOEGO</button>
+          <button class="filter-tab" onclick="setFilter('SHELL', this)">SHELL</button>
+          <button class="filter-tab" onclick="setFilter('BPCL', this)">BPCL</button>
+        </div>
+        <input type="text" id="port-search" class="search-input" placeholder="Search station, area, brand..." oninput="handleGlobalSearch(this.value)" />
+      </div>
+
+      <div class="table-container">
+        <table class="telem-table">
+          <thead>
+            <tr>
+              <th>Station / Hub</th>
+              <th>CPO</th>
+              <th>Port ID / Gun</th>
+              <th>Type / kW</th>
+              <th>Status</th>
+              <th>Duration</th>
+              <th>Est. kWh</th>
+            </tr>
+          </thead>
+          <tbody id="telemetry-table-body">
+            <!-- Populated Dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PANEL 3: TOP LOAD HUBS -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>Top Demand Stations</span>
+        <span style="color: #00e5ff; font-family: monospace; font-size: 11px;">CITY-WIDE RANK</span>
+      </div>
+      
+      <div class="wait-box-hero">
+        <span class="wait-hero-title">Avg Session Turnaround</span>
+        <span class="wait-hero-val" id="house-wide-wait">--</span>
+      </div>
+
+      <div class="funnel-container" id="funnel-container">
+        <!-- Rendered Dynamically from Top 5 Real Stations -->
+      </div>
+      <div id="funnel-footnote" style="font-size: 10px; color: #6e84a3; margin-top: 10px; font-family: monospace;">
+        *Ranked by simultaneous active vehicles &amp; energy output.
+      </div>
+    </div>
+  </div>
+
+  <!-- PUNE CITY-WIDE EV CONSUMPTION & THERMAL HEATMAP PANEL -->
+  <div class="map-panel">
+    <div class="panel-title">
+      <span>PUNE &amp; PCMC EV CONSUMPTION &amp; THERMAL ATTENTION MAP</span>
+      <div style="display: flex; gap: 8px; align-items: center;">
+        <span style="background: #00ff8818; border: 1px solid #00ff88; color: #00ff88; font-size: 11px; padding: 2px 8px; font-weight: 700; font-family: monospace;">🟢 GREEN = MAXIMUM CONSUMPTION (HOT SPOTS)</span>
+      </div>
+    </div>
+
+    <!-- MAP TOOLBAR & QUICK CORRIDOR JUMP CONTROLS -->
+    <div class="map-toolbar">
+      <div class="corridor-btn-group">
+        <span style="font-size: 11px; font-weight: 700; color: #64748b; margin-right: 4px; display: inline-flex; align-items: center;">CORRIDOR JUMP:</span>
+        <button class="map-corridor-btn active" onclick="zoomToCorridor('ALL', this)">ALL PUNE &amp; PCMC</button>
+        <button class="map-corridor-btn" onclick="zoomToCorridor('KHARADI', this)">🔥 KHARADI / WAGHOLI</button>
+        <button class="map-corridor-btn" onclick="zoomToCorridor('VIMAN_NAGAR', this)">🔥 VIMAN NAGAR / AIRPORT</button>
+        <button class="map-corridor-btn" onclick="zoomToCorridor('HINJEWADI', this)">⚡ HINJEWADI IT PARK</button>
+        <button class="map-corridor-btn" onclick="zoomToCorridor('PCMC', this)">📍 PIMPRI-CHINCHWAD</button>
+        <button class="map-corridor-btn" onclick="zoomToCorridor('BANER', this)">📍 BANER / WAKAD (NH-48)</button>
+        <button class="map-corridor-btn" onclick="zoomToCorridor('CENTRAL', this)">📍 PUNE CITY / SWARGATE</button>
+      </div>
+
+      <div class="map-layer-toggles">
+        <button id="btn-map-streets" class="map-toggle-btn active" onclick="setBaseMap('streets')">🗺️ GOOGLE ROADS</button>
+        <button id="btn-map-satellite" class="map-toggle-btn" onclick="setBaseMap('satellite')">🛰️ SATELLITE</button>
+        <button id="btn-toggle-heat" class="map-toggle-btn active" onclick="toggleHeatmapLayer()">🔥 HEATMAP</button>
+        <button id="btn-toggle-markers" class="map-toggle-btn active" onclick="toggleMarkersLayer()">📍 PINS</button>
+      </div>
+    </div>
+
+    <!-- LEAFLET MAP VIEWPORT -->
+    <div id="pune-map-view">
+      <!-- MAP LEGEND OVERLAY -->
+      <div class="map-legend-box">
+        <div style="font-weight: 700; color: #ffffff; margin-bottom: 6px; border-bottom: 1px solid #1c3866; padding-bottom: 3px;">CONSUMPTION INTENSITY</div>
+        <div class="map-legend-row">
+          <span class="map-legend-dot" style="background: #00ff88; box-shadow: 0 0 8px #00ff88;"></span>
+          <span style="color: #00ff88; font-weight: 700;">Maximum Demand (&gt; 500 kWh)</span>
+        </div>
+        <div class="map-legend-row">
+          <span class="map-legend-dot" style="background: #fbbf24; box-shadow: 0 0 6px #fbbf24;"></span>
+          <span style="color: #fbbf24;">Medium-High (150 – 500 kWh)</span>
+        </div>
+        <div class="map-legend-row">
+          <span class="map-legend-dot" style="background: #00e5ff;"></span>
+          <span style="color: #00e5ff;">Moderate Usage (10 – 150 kWh)</span>
+        </div>
+        <div class="map-legend-row">
+          <span class="map-legend-dot" style="background: #475569;"></span>
+          <span style="color: #94a3b8;">Minimum / 0 kWh (Cold Spot)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 24-HOUR STATION PERFORMANCE & LEADERBOARD PANEL -->
+  <div class="panel" style="margin-bottom: 16px;">
+    <div class="panel-title">
+      <span>24-Hour City-Wide Station Leaderboard (Top 257 Hubs)</span>
+      <div style="display: flex; gap: 8px; align-items: center;">
+        <span id="leaderboard-top-badge" style="background: #f59e0b22; border: 1px solid #f59e0b; color: #f59e0b; font-size: 11px; padding: 2px 8px; font-weight: 700; font-family: monospace;">🏆 TOP STATION: CALCULATING...</span>
+        <button class="btn-action" onclick="downloadCSVReport()" style="font-size: 11px; padding: 3px 10px;">DOWNLOAD CITY REPORT (CSV)</button>
+      </div>
+    </div>
+    <div class="table-container" style="max-height: 220px;">
+      <table class="telem-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Rank</th>
+            <th>Station Name</th>
+            <th>Corridor / Address</th>
+            <th>CPO Brand</th>
+            <th>Total Sockets</th>
+            <th>Active Now</th>
+            <th>Sessions (24H)</th>
+            <th>Total Energy (kWh)</th>
+            <th>Performance Tier</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-table-body">
+          <!-- Populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- BOTTOM ROW: GAUGES, BAR GRAPH & DONUT -->
+  <div class="bottom-grid">
+
+    <!-- BOTTOM LEFT: TOP ACTIVE STATION ENERGY BAR GRAPH -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>Highest Output Stations</span>
+        <span style="color: #f59e0b; font-family: monospace; font-size: 11px;">PUNE &amp; PCMC</span>
+      </div>
+      <div id="energy-bar-container">
+        <svg class="chart-svg" id="energy-bar-svg" viewBox="0 0 320 180">
+          <g id="energy-bars-group"></g>
+        </svg>
+      </div>
+      <div style="display: flex; gap: 12px; font-size: 10px; font-family: monospace; color: #8da2c0; margin-top: 4px;">
+        <span><span style="color:#00e5ff;">■</span> Ultra-Fast DC</span>
+        <span><span style="color:#10b981;">■</span> Fast DC 60kW</span>
+        <span><span style="color:#f59e0b;">■</span> Standby / AC</span>
+      </div>
+    </div>
+
+    <!-- BOTTOM MIDDLE: GAUGES ROW -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>City-Wide Grid Performance</span>
+        <span style="color: #00ffd5; font-family: monospace; font-size: 11px;">RELIABILITY</span>
+      </div>
+      
+      <div class="gauges-row">
+        <!-- Gauge 1: Occupancy -->
+        <div class="gauge-card">
+          <svg class="gauge-svg" viewBox="0 0 100 60">
+            <path d="M 15 50 A 35 35 0 0 1 85 50" fill="none" stroke="#122547" stroke-width="8" stroke-linecap="butt" />
+            <path id="gauge-arc-1" d="M 15 50 A 35 35 0 0 1 85 50" fill="none" stroke="#00ffd5" stroke-width="8" stroke-linecap="butt" stroke-dasharray="0 110" />
+            <polygon id="gauge-needle-1" points="50,47 48,18 52,18" fill="#ffffff" transform="rotate(-90, 50, 50)"/>
+            <circle cx="50" cy="50" r="4" fill="#00ffd5" />
+          </svg>
+          <div class="gauge-value-text" id="gauge-val-1">--%</div>
+          <div class="gauge-label">City Occupancy</div>
+        </div>
+
+        <!-- Gauge 2: Availability -->
+        <div class="gauge-card">
+          <svg class="gauge-svg" viewBox="0 0 100 60">
+            <path d="M 15 50 A 35 35 0 0 1 85 50" fill="none" stroke="#122547" stroke-width="8" stroke-linecap="butt" />
+            <path id="gauge-arc-2" d="M 15 50 A 35 35 0 0 1 85 50" fill="none" stroke="#00e5ff" stroke-width="8" stroke-linecap="butt" stroke-dasharray="0 110" />
+            <polygon id="gauge-needle-2" points="50,47 48,18 52,18" fill="#ffffff" transform="rotate(-90, 50, 50)"/>
+            <circle cx="50" cy="50" r="4" fill="#00e5ff" />
+          </svg>
+          <div class="gauge-value-text" id="gauge-val-2">--%</div>
+          <div class="gauge-label">Socket Availability</div>
+        </div>
+
+        <!-- Gauge 3: Health -->
+        <div class="gauge-card">
+          <svg class="gauge-svg" viewBox="0 0 100 60">
+            <path d="M 15 50 A 35 35 0 0 1 85 50" fill="none" stroke="#122547" stroke-width="8" stroke-linecap="butt" />
+            <path id="gauge-arc-3" d="M 15 50 A 35 35 0 0 1 85 50" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="butt" stroke-dasharray="0 110" />
+            <polygon id="gauge-needle-3" points="50,47 48,18 52,18" fill="#ffffff" transform="rotate(-90, 50, 50)"/>
+            <circle cx="50" cy="50" r="4" fill="#10b981" />
+          </svg>
+          <div class="gauge-value-text" id="gauge-val-3">--%</div>
+          <div class="gauge-label">Operational Health</div>
+        </div>
+      </div>
+      
+      <div id="gauges-status-text" style="font-size: 11px; color: #8da2c0; font-family: monospace; margin-top: 14px;">
+        Synchronizing real-time telemetry from 257 hubs...
+      </div>
+    </div>
+
+    <!-- BOTTOM RIGHT: CPO DONUT SHARE -->
+    <div class="panel">
+      <div class="panel-title">
+        <span>Operator Share in Pune &amp; PCMC</span>
+        <span style="color: #00e5ff; font-family: monospace; font-size: 11px;">CPO NETWORK</span>
+      </div>
+
+      <div class="donut-wrapper">
+        <svg width="120" height="120" viewBox="0 0 42 42">
+          <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#14284d" stroke-width="5"></circle>
+          <g id="donut-segments"></g>
+          <text id="donut-center-text" x="21" y="23" text-anchor="middle" fill="#ffffff" font-size="6" font-weight="700" font-family="monospace">1094 PORTS</text>
+        </svg>
+
+        <div class="donut-legend" id="donut-legend-container"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER STATUS -->
+  <footer class="footer-bar">
+    <span>COVERAGE: 375+ HUBS ACROSS PUNE &amp; PIMPRI-CHINCHWAD (1,250+ SOCKETS)</span>
+    <span>HOSTED NETWORKS: TATA POWER EZ CHARGE | JIO-BP PULSE | CHARGEZONE | STATIQ | GOEGO | SHELL RECHARGE | BPCL</span>
+    <span>ENGINE: 100% REAL LIVE TELEMETRY</span>
+  </footer>
+
+  <script>
+    let LIVE_DATA = null;
+    let ACTIVE_FILTER = 'ALL';
+
+    let GLOBAL_SEARCH_QUERY = "";
+
+    function handleGlobalSearch(val) {
+      const q = (val || "").trim();
+      GLOBAL_SEARCH_QUERY = q.toLowerCase();
+
+      const pSearch = document.getElementById("port-search");
+      if (pSearch && pSearch.value !== val) pSearch.value = val;
+      const gSearch = document.getElementById("global-station-search");
+      if (gSearch && gSearch.value !== val) gSearch.value = val;
+
+      renderTable();
+      renderLeaderboard();
+
+      const tag = document.getElementById("search-status-tag");
+      if (tag) {
+        if (GLOBAL_SEARCH_QUERY) {
+          tag.innerHTML = `<span style="color:#00ffd5; font-weight:700;">Matching "${q}"</span>`;
+        } else {
+          tag.innerHTML = `Searching all 257 hubs (1,094 sockets)`;
+        }
+      }
+    }
+
+    function clearGlobalSearch() {
+      const gInput = document.getElementById("global-station-search");
+      if (gInput) gInput.value = "";
+      const pSearch = document.getElementById("port-search");
+      if (pSearch) pSearch.value = "";
+      handleGlobalSearch("");
+    }
+
+    function setFilter(filter, el) {
+      ACTIVE_FILTER = filter;
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderTable();
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById("telemetry-table-body");
+      tbody.innerHTML = "";
+
+      if (!LIVE_DATA || !LIVE_DATA.stations) return;
+
+      const m = LIVE_DATA.metrics || {};
+      const totalGuns = m.total_guns || 1094;
+      const activeCharging = m.active_charging || 0;
+      const availableGuns = m.available_guns || 0;
+      const faultedGuns = m.faulted_guns || 0;
+
+      // Update KPI Cards
+      document.getElementById("val-total-guns").innerText = totalGuns.toLocaleString() + " SOCKETS";
+      document.getElementById("sub-total-guns").innerText = `${LIVE_DATA.stations.length} Hubs in Pune & PCMC`;
+
+      document.getElementById("val-active-charging").innerText = activeCharging + " CHARGING";
+      document.getElementById("val-active-charging").style.color = activeCharging > 0 ? "#00ffd5" : "#94a3b8";
+      document.getElementById("sub-active-charging").innerText = `${availableGuns} Ready | ${faultedGuns} Offline/Faulted`;
+
+      const lifeKwh = m.lifetime_energy_kwh || m.total_energy_kwh_24h || 0;
+      const rollingKwh = m.total_energy_kwh_24h || 0;
+      const lifeSessions = m.lifetime_completed_sessions || m.completed_sessions_24h || 0;
+
+      document.getElementById("val-energy").innerText = lifeKwh.toLocaleString() + " kWh";
+      document.getElementById("val-energy").style.color = "#00ff88";
+      document.getElementById("sub-energy").innerHTML = `<span style="color:#ffffff; font-weight:700;">${lifeSessions} Sessions Total</span> &bull; ${rollingKwh.toLocaleString()} kWh (Rolling 24H)`;
+
+      const avgDur = m.lifetime_avg_duration_min || m.avg_session_duration_min;
+      if (avgDur !== null && avgDur !== undefined) {
+        document.getElementById("val-avg-duration").innerText = avgDur + " min";
+        document.getElementById("val-avg-duration").style.color = "#00e5ff";
+        document.getElementById("sub-avg-duration").innerText = `${lifeSessions} completed sessions across city`;
+        document.getElementById("house-wide-wait").innerText = avgDur + " min";
+      } else {
+        document.getElementById("val-avg-duration").innerText = "NO DATA";
+        document.getElementById("val-avg-duration").style.color = "#94a3b8";
+        document.getElementById("sub-avg-duration").innerText = "Awaiting completed sessions";
+        document.getElementById("house-wide-wait").innerText = activeCharging > 0 ? "IN SESSION" : "NO DATA";
+      }
+
+      document.getElementById("count-all").innerText = totalGuns;
+      document.getElementById("count-charging").innerText = activeCharging;
+      document.getElementById("table-hubs-badge").innerText = `${LIVE_DATA.stations.length} HUBS (${totalGuns} SOCKETS)`;
+
+      // Filter ports using global search query or local search input
+      const query = GLOBAL_SEARCH_QUERY || (document.getElementById("port-search")?.value || "").toLowerCase().trim();
+      let allPorts = [];
+
+      LIVE_DATA.stations.forEach(st => {
+        st.connectors.forEach(c => {
+          allPorts.push({
+            stationName: st.name || '',
+            cpo: st.cpo || '',
+            location: st.location || '',
+            label: c.port_label || c.label || c.id || '',
+            ...c
+          });
+        });
+      });
+
+      // Filter by Tab
+      let filtered = allPorts.filter(p => {
+        if (ACTIVE_FILTER === 'CHARGING') return p.status === 'CHARGING';
+        if (ACTIVE_FILTER === 'TATA POWER') return (p.cpo || '').toLowerCase().includes('tata');
+        if (ACTIVE_FILTER === 'JIO-BP') return (p.cpo || '').toLowerCase().includes('jio');
+        if (ACTIVE_FILTER === 'CHARGEZONE') return (p.cpo || '').toLowerCase().includes('chargezone');
+        if (ACTIVE_FILTER === 'STATIQ') return (p.cpo || '').toLowerCase().includes('statiq');
+        if (ACTIVE_FILTER === 'GOEGO') return (p.cpo || '').toLowerCase().includes('goego');
+        if (ACTIVE_FILTER === 'SHELL') return (p.cpo || '').toLowerCase().includes('shell');
+        if (ACTIVE_FILTER === 'BPCL') return (p.cpo || '').toLowerCase().includes('bpcl');
+        return true;
+      });
+
+      // Filter by Search text safely
+      if (query) {
+        filtered = filtered.filter(p => {
+          const sName = (p.stationName || '').toLowerCase();
+          const cpo = (p.cpo || '').toLowerCase();
+          const loc = (p.location || '').toLowerCase();
+          const lbl = (p.label || p.port_label || '').toLowerCase();
+          const pType = (p.type || '').toLowerCase();
+          return sName.includes(query) || cpo.includes(query) || loc.includes(query) || lbl.includes(query) || pType.includes(query);
+        });
+      }
+
+      // Prioritize CHARGING first, then by station name
+      filtered.sort((a, b) => {
+        if (a.status === 'CHARGING' && b.status !== 'CHARGING') return -1;
+        if (b.status === 'CHARGING' && a.status !== 'CHARGING') return 1;
+        return a.stationName.localeCompare(b.stationName);
+      });
+
+      // Limit DOM render to first 120 sockets for 60fps performance
+      const toRender = filtered.slice(0, 120);
+
+      toRender.forEach(c => {
+        const tr = document.createElement("tr");
+        let statusClass = "status-available";
+        if (c.status === "CHARGING") statusClass = "status-charging";
+        else if (c.status === "FAULTED") statusClass = "status-offline";
+        else if (c.status === "NO DATA") statusClass = "status-nodata";
+
+        tr.innerHTML = `
+          <td style="font-weight: 600; color: #ffffff; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${c.stationName}">${c.stationName}</td>
+          <td style="color: #72d9ff;">${c.cpo}</td>
+          <td style="color: #a5b4fc; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${c.label || c.id}">${c.label || c.id}</td>
+          <td>${c.type}</td>
+          <td><span class="status-pill ${statusClass}">${c.status}</span></td>
+          <td style="color: ${c.status === 'CHARGING' ? '#00e5ff' : '#94a3b8'}">${c.duration}</td>
+          <td style="color: #34d399;">${c.kwh}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: #94a3b8; padding: 20px;">No sockets matching the selected filter.</td></tr>`;
+      }
+    }
+
+    function renderTrendGraph() {
+      const gLines = document.getElementById("trend-line-group");
+      const gLabels = document.getElementById("trend-axis-labels");
+      const summaryText = document.getElementById("trend-summary-text");
+      if (!gLines || !LIVE_DATA) return;
+
+      const m = LIVE_DATA.metrics || {};
+      const active = m.active_charging || 0;
+      const total = m.total_guns || 1218;
+      const occPct = m.occupancy_rate_pct || 0;
+      const history = LIVE_DATA.trend_history_24h || LIVE_DATA.recent_history || [];
+
+      gLines.innerHTML = "";
+      gLabels.innerHTML = "";
+
+      if (history.length === 0) {
+        summaryText.innerText = `City grid active. ${active} sockets actively charging across Pune & PCMC.`;
+        return;
+      }
+
+      const minX = 40;
+      const maxX = 300;
+      const baseY = 140;
+      const maxY = 20;
+
+      const count = history.length;
+      const stepX = count > 1 ? (maxX - minX) / (count - 1) : 0;
+
+      let points = [];
+      let maxPoint = { x: minX, y: baseY, pct: 0, time: "", active: 0 };
+
+      history.forEach((h, i) => {
+        const x = count > 1 ? minX + i * stepX : (minX + maxX) / 2;
+        const normalizedPct = Math.min(100, Math.max(0, h.pct));
+        const y = baseY - (normalizedPct / 100) * (baseY - maxY);
+        points.push({ x, y, pct: h.pct, time: h.time, active: h.active || 0 });
+
+        if (h.pct >= maxPoint.pct) {
+          maxPoint = { x, y, pct: h.pct, time: h.time, active: h.active || 0 };
+        }
+      });
+
+      // Override with verified metrics peak if provided
+      const peakPct = m.peak_load_pct_24h !== undefined ? m.peak_load_pct_24h : maxPoint.pct;
+      const peakTime = m.peak_load_time_24h || maxPoint.time;
+      const peakCars = m.peak_active_guns_24h || maxPoint.active;
+
+      let d = "";
+      points.forEach((pt, i) => {
+        d += (i === 0 ? "M " : " L ") + `${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`;
+      });
+
+      // Area fill underneath the curve
+      const areaPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      areaPath.setAttribute("d", `${d} L ${points[points.length-1].x.toFixed(1)} ${baseY} L ${points[0].x.toFixed(1)} ${baseY} Z`);
+      areaPath.setAttribute("fill", "rgba(0, 229, 255, 0.08)");
+      gLines.appendChild(areaPath);
+
+      const pathEl = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      pathEl.setAttribute("d", d);
+      pathEl.setAttribute("fill", "none");
+      pathEl.setAttribute("stroke", "#00e5ff");
+      pathEl.setAttribute("stroke-width", "2");
+      gLines.appendChild(pathEl);
+
+      points.forEach((pt, i) => {
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", pt.x.toFixed(1));
+        circle.setAttribute("cy", pt.y.toFixed(1));
+        circle.setAttribute("r", (i === points.length - 1) ? "3.5" : "2");
+        circle.setAttribute("fill", (i === points.length - 1) ? "#00ffd5" : "#00e5ff");
+        circle.setAttribute("stroke", "#060b18");
+        circle.setAttribute("stroke-width", "1");
+        gLines.appendChild(circle);
+      });
+
+      // Peak Highlight Marker
+      if (points.length > 0) {
+        const peakCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        peakCircle.setAttribute("cx", maxPoint.x.toFixed(1));
+        peakCircle.setAttribute("cy", maxPoint.y.toFixed(1));
+        peakCircle.setAttribute("r", "5");
+        peakCircle.setAttribute("fill", "#ffffff");
+        peakCircle.setAttribute("stroke", "#00ffd5");
+        peakCircle.setAttribute("stroke-width", "2.5");
+        gLines.appendChild(peakCircle);
+
+        const peakText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        peakText.setAttribute("x", Math.max(35, Math.min(200, maxPoint.x - 35)));
+        peakText.setAttribute("y", Math.max(16, maxPoint.y - 8));
+        peakText.setAttribute("fill", "#00ffd5");
+        peakText.setAttribute("font-size", "8.5");
+        peakText.setAttribute("font-weight", "700");
+        peakText.setAttribute("font-family", "monospace");
+        peakText.textContent = `24H PEAK: ${peakPct}% (${peakCars} CARS @ ${peakTime})`;
+        gLines.appendChild(peakText);
+      }
+
+      // 5 Timeline Labels distributed across 24h
+      const labelIndices = [0, Math.floor(count * 0.25), Math.floor(count * 0.5), Math.floor(count * 0.75), count - 1];
+      const uniqueIndices = [...new Set(labelIndices)].sort((a,b)=>a-b);
+      uniqueIndices.forEach(idx => {
+        const pt = points[idx];
+        if (pt) {
+          const tText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          tText.setAttribute("x", (pt.x - 12).toFixed(1));
+          tText.setAttribute("y", "158");
+          tText.setAttribute("fill", idx === count - 1 ? "#00ffd5" : "#607699");
+          tText.setAttribute("font-size", "7.5");
+          tText.setAttribute("font-family", "monospace");
+          tText.textContent = idx === count - 1 ? `${pt.time}` : pt.time;
+          gLabels.appendChild(tText);
+        }
+      });
+
+      summaryText.innerHTML = `<span style="color:#00ffd5; font-weight:700;">24-Hour Peak: ${peakPct}%</span> (${peakCars} cars at ${peakTime}) &bull; Currently ${active} of ${total} sockets charging (${occPct}% grid load).`;
+    }
+
+    function renderFunnel() {
+      const fContainer = document.getElementById("funnel-container");
+      if (!fContainer || !LIVE_DATA || !LIVE_DATA.daily_summary) return;
+      fContainer.innerHTML = "";
+
+      const top5 = LIVE_DATA.daily_summary.slice(0, 5);
+      const widths = ["100%", "88%", "76%", "64%", "52%"];
+      const colors = ["#164e75", "#136a7b", "#108080", "#12998a", "#0f766e"];
+
+      top5.forEach((st, i) => {
+        const div = document.createElement("div");
+        div.className = "funnel-bar";
+        div.style.width = widths[i] || "50%";
+        div.style.background = colors[i] || "#164e75";
+        div.style.borderColor = "#1e70a8";
+
+        let statusText = `${st.active_now} Active`;
+        if (st.total_kwh_24h > 0) statusText += ` (${st.total_kwh_24h} kWh)`;
+
+        div.innerHTML = `
+          <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px;">${st.name}</span>
+          <span style="font-weight: 700; color: #00ffd5;">${statusText}</span>
+        `;
+        fContainer.appendChild(div);
+      });
+    }
+
+    function renderEnergyBars() {
+      const gBars = document.getElementById("energy-bars-group");
+      if (!gBars || !LIVE_DATA || !LIVE_DATA.daily_summary) return;
+      gBars.innerHTML = "";
+
+      const top5 = LIVE_DATA.daily_summary.slice(0, 5);
+      const maxVal = Math.max(...top5.map(s => s.active_now > 0 ? s.active_now * 15 : s.total_kwh_24h), 10);
+      const colors = ["#00e5ff", "#10b981", "#f59e0b", "#3b82f6", "#64748b"];
+
+      const baseLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      baseLine.setAttribute("x1", "20");
+      baseLine.setAttribute("y1", "135");
+      baseLine.setAttribute("x2", "305");
+      baseLine.setAttribute("y2", "135");
+      baseLine.setAttribute("stroke", "#142747");
+      baseLine.setAttribute("stroke-width", "1");
+      gBars.appendChild(baseLine);
+
+      top5.forEach((st, i) => {
+        const barX = 35 + i * 55;
+        const barWidth = 32;
+        const metricVal = st.total_kwh_24h > 0 ? st.total_kwh_24h : (st.active_now * 10);
+        const barHeight = Math.max(4, (metricVal / maxVal) * 105);
+        const barY = 135 - barHeight;
+
+        const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        rect.setAttribute("x", barX);
+        rect.setAttribute("y", barY);
+        rect.setAttribute("width", barWidth);
+        rect.setAttribute("height", barHeight);
+        rect.setAttribute("fill", colors[i]);
+        gBars.appendChild(rect);
+
+        const valText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        valText.setAttribute("x", barX + barWidth / 2);
+        valText.setAttribute("y", barY - 4);
+        valText.setAttribute("text-anchor", "middle");
+        valText.setAttribute("fill", "#ffffff");
+        valText.setAttribute("font-size", "8");
+        valText.setAttribute("font-family", "monospace");
+        valText.textContent = st.total_kwh_24h > 0 ? `${st.total_kwh_24h}k` : `${st.active_now} cars`;
+        gBars.appendChild(valText);
+
+        const shortName = st.name.split(" ")[0].substring(0, 7);
+        const nameText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        nameText.setAttribute("x", barX + barWidth / 2);
+        nameText.setAttribute("y", "148");
+        nameText.setAttribute("text-anchor", "middle");
+        nameText.setAttribute("fill", "#8da2c0");
+        nameText.setAttribute("font-size", "8");
+        nameText.setAttribute("font-family", "monospace");
+        nameText.textContent = shortName;
+        gBars.appendChild(nameText);
+      });
+    }
+
+    function renderGauges() {
+      if (!LIVE_DATA || !LIVE_DATA.metrics) return;
+      const m = LIVE_DATA.metrics;
+
+      const occ = m.occupancy_rate_pct || 0;
+      const avail = m.available_pct || 0;
+      const health = m.operational_health_pct || 0;
+
+      document.getElementById("gauge-val-1").innerText = occ.toFixed(1) + "%";
+      document.getElementById("gauge-val-2").innerText = avail.toFixed(1) + "%";
+      document.getElementById("gauge-val-3").innerText = health.toFixed(1) + "%";
+
+      const rot1 = (occ / 100) * 180 - 90;
+      const rot2 = (avail / 100) * 180 - 90;
+      const rot3 = (health / 100) * 180 - 90;
+
+      document.getElementById("gauge-needle-1").setAttribute("transform", `rotate(${rot1.toFixed(1)}, 50, 50)`);
+      document.getElementById("gauge-needle-2").setAttribute("transform", `rotate(${rot2.toFixed(1)}, 50, 50)`);
+      document.getElementById("gauge-needle-3").setAttribute("transform", `rotate(${rot3.toFixed(1)}, 50, 50)`);
+
+      const dash1 = (occ / 100) * 110;
+      const dash2 = (avail / 100) * 110;
+      const dash3 = (health / 100) * 110;
+
+      document.getElementById("gauge-arc-1").setAttribute("stroke-dasharray", `${dash1.toFixed(1)} 110`);
+      document.getElementById("gauge-arc-2").setAttribute("stroke-dasharray", `${dash2.toFixed(1)} 110`);
+      document.getElementById("gauge-arc-3").setAttribute("stroke-dasharray", `${dash3.toFixed(1)} 110`);
+
+      document.getElementById("gauges-status-text").innerText = 
+        `Grid Status: ${m.total_guns} sockets across 257 hubs | ${m.active_charging} charging | ${m.available_guns} ready | ${m.faulted_guns} offline.`;
+    }
+
+    function renderDonut() {
+      const gSegments = document.getElementById("donut-segments");
+      const lContainer = document.getElementById("donut-legend-container");
+      const cText = document.getElementById("donut-center-text");
+      if (!gSegments || !LIVE_DATA || !LIVE_DATA.cpo_distribution) return;
+
+      gSegments.innerHTML = "";
+      lContainer.innerHTML = "";
+
+      const dist = LIVE_DATA.cpo_distribution;
+      const total = LIVE_DATA.metrics.total_guns || 1094;
+      cText.textContent = `${total} PORTS`;
+
+      const colors = {
+        "Tata Power EZ Charge": "#00ff88",
+        "Jio-bp pulse": "#f43f5e",
+        "ChargeZone": "#f59e0b",
+        "goEgo Network": "#00ffd5",
+        "Statiq": "#00e5ff",
+        "Shell Recharge": "#10b981",
+        "BPCL": "#3b82f6",
+        "HPCL": "#ec4899",
+        "Sunfuel": "#a855f7",
+        "Bolt.Earth": "#84cc16"
+      };
+
+      let cumulativeOffset = 25;
+
+      Object.entries(dist).forEach(([cpo, count]) => {
+        const pct = (count / total) * 100;
+        const color = colors[cpo] || "#94a3b8";
+
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", "21");
+        circle.setAttribute("cy", "21");
+        circle.setAttribute("r", "15.91549430918954");
+        circle.setAttribute("fill", "transparent");
+        circle.setAttribute("stroke", color);
+        circle.setAttribute("stroke-width", "5");
+        circle.setAttribute("stroke-dasharray", `${pct.toFixed(1)} ${(100 - pct).toFixed(1)}`);
+        circle.setAttribute("stroke-dashoffset", cumulativeOffset.toFixed(1));
+        gSegments.appendChild(circle);
+
+        cumulativeOffset -= pct;
+
+        const item = document.createElement("div");
+        item.className = "legend-item";
+        item.innerHTML = `
+          <div class="legend-color" style="background:${color}; border-color:${color};"></div>
+          <span>${cpo} (${count}, ${pct.toFixed(0)}%)</span>
+        `;
+        lContainer.appendChild(item);
+      });
+    }
+
+    function renderLeaderboard() {
+      const lbody = document.getElementById("leaderboard-table-body");
+      if (!lbody || !LIVE_DATA || !LIVE_DATA.daily_summary) return;
+      lbody.innerHTML = "";
+
+      let summary = LIVE_DATA.daily_summary;
+      if (GLOBAL_SEARCH_QUERY) {
+        summary = summary.filter(st => 
+          st.name.toLowerCase().includes(GLOBAL_SEARCH_QUERY) ||
+          st.location.toLowerCase().includes(GLOBAL_SEARCH_QUERY) ||
+          st.cpo.toLowerCase().includes(GLOBAL_SEARCH_QUERY)
+        );
+      }
+
+      if (summary.length > 0) {
+        const top = summary[0];
+        document.getElementById("leaderboard-top-badge").innerText = `🏆 #1 ACTIVE HUB: ${top.name.toUpperCase()} (${top.active_now} ACTIVE SESSIONS | ${top.total_kwh_24h} kWh)`;
+      }
+
+      // Render top 50 in leaderboard table for smooth scrolling
+      summary.slice(0, 50).forEach((st, idx) => {
+        const tr = document.createElement("tr");
+        let tierColor = "#94a3b8";
+        let tierText = "IDLE";
+        if (st.active_now >= 2 || st.total_kwh_24h > 15) {
+          tierColor = "#00e5ff";
+          tierText = "HIGH LOAD";
+        } else if (st.active_now === 1 || st.total_kwh_24h > 0) {
+          tierColor = "#34d399";
+          tierText = "ACTIVE";
+        }
+
+        const rankIcon = idx === 0 ? "🥇" : (idx === 1 ? "🥈" : (idx === 2 ? "🥉" : `#${idx+1}`));
+
+        tr.innerHTML = `
+          <td style="font-weight: 700; text-align: center; color: #facc15;">${rankIcon}</td>
+          <td style="font-weight: 600; color: #ffffff; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${st.name}">${st.name}</td>
+          <td style="color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${st.location}">${st.location}</td>
+          <td style="color: #72d9ff;">${st.cpo}</td>
+          <td style="text-align: center;">${st.ports_count}</td>
+          <td style="font-weight: 700; color: #00ffd5; text-align: center;">${st.active_now}</td>
+          <td style="font-weight: 700; color: #ffffff; text-align: center;">${st.total_sessions_24h}</td>
+          <td style="font-weight: 700; color: #34d399;">${st.total_kwh_24h} kWh</td>
+          <td><span style="border: 1px solid ${tierColor}; color: ${tierColor}; font-size: 10px; padding: 2px 6px; font-weight: 700;">${tierText}</span></td>
+        `;
+        lbody.appendChild(tr);
+      });
+    }
+
+    function downloadCSVReport() {
+      if (!LIVE_DATA || !LIVE_DATA.daily_summary) return;
+      let csv = "Rank,Station ID,Station Name,Location,CPO,Ports Count,Active Now,Sessions (24H),Total Energy (kWh)\n";
+      LIVE_DATA.daily_summary.forEach((st, idx) => {
+        csv += `${idx+1},"${st.station_id}","${st.name}","${st.location}","${st.cpo}",${st.ports_count},${st.active_now},${st.total_sessions_24h},${st.total_kwh_24h}\n`;
+      });
+
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `pune_pcmc_ev_city_report_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    let MAP_INSTANCE = null;
+    let MAP_HEAT_LAYER = null;
+    let MAP_MARKERS_LAYER = null;
+    let SHOW_HEATMAP = true;
+    let SHOW_MARKERS = true;
+
+    const CORRIDOR_COORDS = {
+      'ALL': { center: [18.55, 73.85], zoom: 11 },
+      'KHARADI': { center: [18.555, 73.945], zoom: 13 },
+      'VIMAN_NAGAR': { center: [18.567, 73.912], zoom: 14 },
+      'HINJEWADI': { center: [18.592, 73.738], zoom: 13 },
+      'PCMC': { center: [18.640, 73.780], zoom: 12 },
+      'BANER': { center: [18.560, 73.785], zoom: 13 },
+      'CENTRAL': { center: [18.515, 73.855], zoom: 13 }
+    };
+
+    function zoomToCorridor(corridorKey, btn) {
+      if (btn) {
+        document.querySelectorAll('.map-corridor-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      const target = CORRIDOR_COORDS[corridorKey] || CORRIDOR_COORDS['ALL'];
+      if (MAP_INSTANCE) {
+        MAP_INSTANCE.flyTo(target.center, target.zoom, { duration: 1.2 });
+      }
+    }
+
+    function toggleHeatmapLayer() {
+      SHOW_HEATMAP = !SHOW_HEATMAP;
+      const btn = document.getElementById("btn-toggle-heat");
+      if (btn) {
+        btn.classList.toggle("active", SHOW_HEATMAP);
+        btn.innerText = SHOW_HEATMAP ? "🔥 THERMAL HEATMAP: ON" : "🔥 THERMAL HEATMAP: OFF";
+      }
+      if (MAP_HEAT_LAYER && MAP_INSTANCE) {
+        if (SHOW_HEATMAP) {
+          MAP_INSTANCE.addLayer(MAP_HEAT_LAYER);
+        } else {
+          MAP_INSTANCE.removeLayer(MAP_HEAT_LAYER);
+        }
+      }
+    }
+
+    function toggleMarkersLayer() {
+      SHOW_MARKERS = !SHOW_MARKERS;
+      const btn = document.getElementById("btn-toggle-markers");
+      if (btn) {
+        btn.classList.toggle("active", SHOW_MARKERS);
+        btn.innerText = SHOW_MARKERS ? "📍 HUB PINS: ON" : "📍 HUB PINS: OFF";
+      }
+      if (MAP_MARKERS_LAYER && MAP_INSTANCE) {
+        if (SHOW_MARKERS) {
+          MAP_INSTANCE.addLayer(MAP_MARKERS_LAYER);
+        } else {
+          MAP_INSTANCE.removeLayer(MAP_MARKERS_LAYER);
+        }
+      }
+    }
+
+    let BASE_TILES = {};
+    let CURRENT_BASE_LAYER = 'streets';
+
+    function setBaseMap(type) {
+      CURRENT_BASE_LAYER = type;
+      const bStreets = document.getElementById('btn-map-streets');
+      const bSat = document.getElementById('btn-map-satellite');
+      if (bStreets) bStreets.classList.toggle('active', type === 'streets');
+      if (bSat) bSat.classList.toggle('active', type === 'satellite');
+
+      if (MAP_INSTANCE && BASE_TILES[type]) {
+        if (BASE_TILES['streets']) MAP_INSTANCE.removeLayer(BASE_TILES['streets']);
+        if (BASE_TILES['satellite']) MAP_INSTANCE.removeLayer(BASE_TILES['satellite']);
+        BASE_TILES[type].addTo(MAP_INSTANCE);
+        BASE_TILES[type].bringToBack();
+      }
+    }
+
+    function initOrUpdateMap() {
+      if (typeof L === "undefined") return;
+      const mapDiv = document.getElementById("pune-map-view");
+      if (!mapDiv) return;
+
+      if (!MAP_INSTANCE) {
+        MAP_INSTANCE = L.map('pune-map-view', {
+          center: [18.55, 73.85],
+          zoom: 11,
+          zoomControl: true,
+          attributionControl: false
+        });
+
+        // Google Maps Standard Roadmap & Satellite Layers (No API key required)
+        BASE_TILES['streets'] = L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+          maxZoom: 20,
+          subdomains: ['0', '1', '2', '3']
+        });
+
+        BASE_TILES['satellite'] = L.tileLayer('https://mt{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+          maxZoom: 20,
+          subdomains: ['0', '1', '2', '3']
+        });
+
+        BASE_TILES[CURRENT_BASE_LAYER].addTo(MAP_INSTANCE);
+
+        MAP_MARKERS_LAYER = L.layerGroup().addTo(MAP_INSTANCE);
+      }
+
+      if (!LIVE_DATA || !LIVE_DATA.daily_summary) return;
+
+      // Clear existing markers
+      MAP_MARKERS_LAYER.clearLayers();
+
+      const heatPoints = [];
+      const summary = LIVE_DATA.daily_summary || [];
+
+      summary.forEach(st => {
+        const lat = parseFloat(st.latitude);
+        const lon = parseFloat(st.longitude);
+        if (!lat || !lon || isNaN(lat) || isNaN(lon) || lat === 0) return;
+
+        const kwh = parseFloat(st.total_kwh_24h || 0);
+        const active = parseInt(st.active_now || 0);
+        const sessions = parseInt(st.total_sessions_24h || 0);
+
+        // Heatmap weighted calculation
+        let weight = 0.15;
+        if (kwh > 500) weight = 1.0;
+        else if (kwh > 200) weight = 0.75;
+        else if (kwh > 50) weight = 0.5;
+        else if (kwh > 0 || active > 0) weight = 0.3;
+        heatPoints.push([lat, lon, weight]);
+
+        // Green for Maximum Consumption / Highest Attention
+        let color = "#475569";
+        let fillColor = "#334155";
+        let fillOpacity = 0.35;
+        let radius = 6;
+        let tierLabel = "❄️ MINIMUM / 0 kWh (COLD SPOT)";
+
+        if (kwh >= 500 || active >= 3) {
+          // MAXIMUM CONSUMPTION - VIVID NEON GREEN
+          color = "#ffffff";
+          fillColor = "#00ff88";
+          fillOpacity = 0.95;
+          radius = 18;
+          tierLabel = "🔥 MAXIMUM ATTENTION (HIGH CONSUMPTION)";
+        } else if (kwh >= 150) {
+          // MEDIUM-HIGH DEMAND - AMBER GOLD
+          color = "#ffffff";
+          fillColor = "#fbbf24";
+          fillOpacity = 0.85;
+          radius = 12;
+          tierLabel = "⚡ MEDIUM-HIGH DEMAND";
+        } else if (kwh > 0 || active > 0) {
+          // MODERATE DEMAND - ELECTRIC CYAN
+          color = "#00e5ff";
+          fillColor = "#00e5ff";
+          fillOpacity = 0.75;
+          radius = 8;
+          tierLabel = "🔋 MODERATE USAGE";
+        }
+
+        const marker = L.circleMarker([lat, lon], {
+          radius: radius,
+          color: color,
+          weight: (kwh >= 500 || active >= 3) ? 2.5 : 1,
+          fillColor: fillColor,
+          fillOpacity: fillOpacity
+        });
+
+        const popupContent = `
+          <div style="font-family: monospace; font-size: 11px; padding: 2px;">
+            <div style="font-size: 13px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">${st.name}</div>
+            <div style="color: #72d9ff; margin-bottom: 6px;">${st.cpo} &bull; ${st.location || 'Pune / PCMC'}</div>
+            <div style="background: rgba(0,0,0,0.4); border: 1px solid #1c3866; padding: 6px 8px; margin-bottom: 6px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                <span style="color: #94a3b8;">Total Energy (24H):</span>
+                <span style="color: #00ff88; font-weight: 700; font-size: 12px;">${kwh.toFixed(1)} kWh</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                <span style="color: #94a3b8;">Active Charging:</span>
+                <span style="color: #00e5ff; font-weight: 700;">${active} Cars</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: #94a3b8;">Sessions Logged:</span>
+                <span style="color: #ffffff; font-weight: 700;">${sessions}</span>
+              </div>
+            </div>
+            <div style="font-weight: 700; color: ${fillColor}; font-size: 10px; border-top: 1px solid #1c3866; padding-top: 4px;">
+              ${tierLabel}
+            </div>
+          </div>
+        `;
+
+        marker.bindPopup(popupContent);
+        marker.addTo(MAP_MARKERS_LAYER);
+      });
+
+      // Update Heatmap Layer
+      if (typeof L.heatLayer !== "undefined") {
+        if (MAP_HEAT_LAYER && MAP_INSTANCE) {
+          MAP_INSTANCE.removeLayer(MAP_HEAT_LAYER);
+        }
+        MAP_HEAT_LAYER = L.heatLayer(heatPoints, {
+          radius: 36,
+          blur: 24,
+          maxZoom: 14,
+          gradient: {
+            0.15: '#1e3a8a',
+            0.35: '#0284c7',
+            0.55: '#06b6d4',
+            0.75: '#f59e0b',
+            0.90: '#10b981',
+            1.00: '#00ff88'
+          }
+        });
+        if (SHOW_HEATMAP && MAP_INSTANCE) {
+          MAP_HEAT_LAYER.addTo(MAP_INSTANCE);
+        }
+      }
+
+      setTimeout(() => {
+        if (MAP_INSTANCE) MAP_INSTANCE.invalidateSize();
+      }, 150);
+    }
+
+    async function loadLiveTelemetry() {
+      try {
+        const res = await fetch("/live_telemetry.json?t=" + Date.now());
+        if (res.ok) {
+          LIVE_DATA = await res.json();
+          renderTable();
+          renderTrendGraph();
+          renderFunnel();
+          renderEnergyBars();
+          renderGauges();
+          renderDonut();
+          renderLeaderboard();
+          initOrUpdateMap();
+          document.getElementById("last-sync").innerText = LIVE_DATA.display_time || new Date().toLocaleTimeString();
+        }
+      } catch (e) {
+        console.error("Telemetry sync error:", e);
+      }
+    }
+
+    function refreshData() {
+      loadLiveTelemetry();
+    }
+
+    // Initial render & 3-second live polling loop
+    loadLiveTelemetry();
+    setInterval(loadLiveTelemetry, 3000);
+  </script>
+</body>
+</html>

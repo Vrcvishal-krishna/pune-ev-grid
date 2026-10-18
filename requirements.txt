@@ -1,0 +1,2 @@
+# Uses Python standard library (urllib, sqlite3, threading, http.server, ssl)
+# Zero external pip packages required for ultra-fast boot and deployment
