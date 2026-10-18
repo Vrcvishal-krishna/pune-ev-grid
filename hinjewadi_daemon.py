@@ -9,6 +9,10 @@ import os
 import sys
 import time
 import json
+
+os.environ['TZ'] = 'Asia/Kolkata'
+if hasattr(time, 'tzset'):
+    time.tzset()
 import sqlite3
 import datetime
 import urllib.request

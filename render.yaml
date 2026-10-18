@@ -6,3 +6,6 @@ services:
     startCommand: python app.py
     plan: free
     autoDeploy: true
+    envVars:
+      - key: TZ
+        value: Asia/Kolkata

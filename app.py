@@ -10,6 +10,10 @@ import time
 import threading
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
+os.environ['TZ'] = 'Asia/Kolkata'
+if hasattr(time, 'tzset'):
+    time.tzset()
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE_DIR)
 
