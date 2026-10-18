@@ -227,8 +227,11 @@ def fetch_tatapower_stations():
         "filter": {"radius": "", "connector_type": "ALL", "connector_standard": [], "availability": "", "free_chargers": "", "amenities": [], "tariff_name": []}
     }
     try:
+        ssl_ctx = ssl.create_default_context()
+        ssl_ctx.check_hostname = False
+        ssl_ctx.verify_mode = ssl.CERT_NONE
         req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers)
-        with urllib.request.urlopen(req, timeout=12) as res:
+        with urllib.request.urlopen(req, timeout=12, context=ssl_ctx) as res:
             data = json.loads(res.read().decode("utf-8"))
         raw_stations = data.get("chargingStations", [])
         tata_stations = []
@@ -430,6 +433,14 @@ def fetch_jiobp_stations():
         return []
 
 LAST_KNOWN_STATIONS = {}
+if os.path.exists(TELEMETRY_JSON):
+    try:
+        with open(TELEMETRY_JSON) as _f:
+            _cached = json.load(_f)
+            for _s in _cached.get("stations", []):
+                LAST_KNOWN_STATIONS[_s["id"]] = _s
+    except Exception:
+        pass
 
 def poll_network_live(station_list):
     init_db()
@@ -465,39 +476,8 @@ def poll_network_live(station_list):
         for j_st in jio_stations:
             LAST_KNOWN_STATIONS[j_st["id"]] = j_st
 
-    # Use cached fallback for any transiently failing station
-    snapshot_stations = []
-    for s_meta in station_list:
-        sid_str = f"ST-{s_meta['station_id']}"
-        if sid_str in LAST_KNOWN_STATIONS:
-            snapshot_stations.append(LAST_KNOWN_STATIONS[sid_str])
-
-    # Append Tata Power EZ Charge snapshot stations
-    if tata_stations:
-        for t_st in tata_stations:
-            snapshot_stations.append(t_st)
-    else:
-        for sid_key, st_obj in LAST_KNOWN_STATIONS.items():
-            if sid_key.startswith("TP-"):
-                snapshot_stations.append(st_obj)
-
-    # Append ChargeZone direct snapshot stations
-    if cz_stations:
-        for c_st in cz_stations:
-            snapshot_stations.append(c_st)
-    else:
-        for sid_key, st_obj in LAST_KNOWN_STATIONS.items():
-            if sid_key.startswith("CZ-"):
-                snapshot_stations.append(st_obj)
-
-    # Append Jio-bp pulse snapshot stations
-    if jio_stations:
-        for j_st in jio_stations:
-            snapshot_stations.append(j_st)
-    else:
-        for sid_key, st_obj in LAST_KNOWN_STATIONS.items():
-            if sid_key.startswith("JIO-"):
-                snapshot_stations.append(st_obj)
+    # Unified city-wide snapshot: combines all live and cached stations across all networks
+    snapshot_stations = list(LAST_KNOWN_STATIONS.values())
 
     total_active = 0
     total_available = 0

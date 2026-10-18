@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-18T21:31:37.480281",
-  "display_time": "21:31:37",
+  "timestamp": "2026-10-18T21:47:08.926335",
+  "display_time": "21:47:08",
   "feed_network": "STATIQ_TATA_POWER_PUNE_PCMC_CITY_WIDE_FEED",
   "metrics": {
     "total_guns": 1250,
@@ -10,18 +10,18 @@
     "occupancy_rate_pct": 3.7,
     "available_pct": 74.4,
     "operational_health_pct": 78.1,
-    "total_energy_kwh_24h": 12509.4,
-    "lifetime_energy_kwh": 74202.0,
-    "total_sessions_24h": 562,
-    "lifetime_sessions": 3131,
-    "completed_sessions_24h": 516,
-    "lifetime_completed_sessions": 3085,
-    "avg_session_duration_min": 45.3,
+    "total_energy_kwh_24h": 12561.2,
+    "lifetime_energy_kwh": 74407.6,
+    "total_sessions_24h": 557,
+    "lifetime_sessions": 3132,
+    "completed_sessions_24h": 511,
+    "lifetime_completed_sessions": 3086,
+    "avg_session_duration_min": 45.5,
     "lifetime_avg_duration_min": 51.9,
     "top_station": "Comfort Zone Ph-1, Balewadi ",
-    "peak_load_pct_24h": 5.2,
-    "peak_load_time_24h": "16:31",
-    "peak_active_guns_24h": 65
+    "peak_load_pct_24h": 5.1,
+    "peak_load_time_24h": "16:47",
+    "peak_active_guns_24h": 64
   },
   "cpo_distribution": {
     "Statiq": 164,
@@ -37,254 +37,254 @@
   },
   "recent_history": [
     {
-      "time": "21:31",
+      "time": "21:47",
       "active": 56,
       "pct": 4.5
     },
     {
-      "time": "22:31",
-      "active": 46,
-      "pct": 3.7
-    },
-    {
-      "time": "23:31",
-      "active": 46,
-      "pct": 3.7
-    },
-    {
-      "time": "00:31",
-      "active": 43,
-      "pct": 3.4
-    },
-    {
-      "time": "01:31",
-      "active": 34,
-      "pct": 2.7
-    },
-    {
-      "time": "02:31",
-      "active": 28,
-      "pct": 2.2
-    },
-    {
-      "time": "03:31",
-      "active": 31,
-      "pct": 2.5
-    },
-    {
-      "time": "04:31",
-      "active": 28,
-      "pct": 2.2
-    },
-    {
-      "time": "05:31",
-      "active": 25,
-      "pct": 2.0
-    },
-    {
-      "time": "06:31",
-      "active": 35,
-      "pct": 2.8
-    },
-    {
-      "time": "07:31",
-      "active": 35,
-      "pct": 2.8
-    },
-    {
-      "time": "08:31",
-      "active": 43,
-      "pct": 3.4
-    },
-    {
-      "time": "09:31",
-      "active": 40,
-      "pct": 3.2
-    },
-    {
-      "time": "10:31",
+      "time": "22:47",
       "active": 45,
       "pct": 3.6
     },
     {
-      "time": "11:31",
+      "time": "23:47",
+      "active": 48,
+      "pct": 3.8
+    },
+    {
+      "time": "00:47",
+      "active": 38,
+      "pct": 3.0
+    },
+    {
+      "time": "01:47",
+      "active": 32,
+      "pct": 2.6
+    },
+    {
+      "time": "02:47",
+      "active": 29,
+      "pct": 2.3
+    },
+    {
+      "time": "03:47",
+      "active": 32,
+      "pct": 2.6
+    },
+    {
+      "time": "04:47",
+      "active": 26,
+      "pct": 2.1
+    },
+    {
+      "time": "05:47",
+      "active": 27,
+      "pct": 2.2
+    },
+    {
+      "time": "06:47",
+      "active": 35,
+      "pct": 2.8
+    },
+    {
+      "time": "07:47",
+      "active": 37,
+      "pct": 3.0
+    },
+    {
+      "time": "08:47",
       "active": 40,
       "pct": 3.2
     },
     {
-      "time": "12:31",
-      "active": 49,
-      "pct": 3.9
+      "time": "09:47",
+      "active": 43,
+      "pct": 3.4
     },
     {
-      "time": "13:31",
-      "active": 45,
-      "pct": 3.6
+      "time": "10:47",
+      "active": 40,
+      "pct": 3.2
     },
     {
-      "time": "14:31",
-      "active": 56,
-      "pct": 4.5
-    },
-    {
-      "time": "15:31",
-      "active": 50,
-      "pct": 4.0
-    },
-    {
-      "time": "16:31",
-      "active": 65,
-      "pct": 5.2
-    },
-    {
-      "time": "17:31",
-      "active": 60,
-      "pct": 4.8
-    },
-    {
-      "time": "18:31",
-      "active": 57,
-      "pct": 4.6
-    },
-    {
-      "time": "19:31",
-      "active": 56,
-      "pct": 4.5
-    },
-    {
-      "time": "20:31",
+      "time": "11:47",
       "active": 47,
       "pct": 3.8
     },
     {
-      "time": "21:31",
+      "time": "12:47",
+      "active": 43,
+      "pct": 3.4
+    },
+    {
+      "time": "13:47",
+      "active": 48,
+      "pct": 3.8
+    },
+    {
+      "time": "14:47",
+      "active": 54,
+      "pct": 4.3
+    },
+    {
+      "time": "15:47",
+      "active": 47,
+      "pct": 3.8
+    },
+    {
+      "time": "16:47",
+      "active": 64,
+      "pct": 5.1
+    },
+    {
+      "time": "17:47",
+      "active": 61,
+      "pct": 4.9
+    },
+    {
+      "time": "18:47",
+      "active": 58,
+      "pct": 4.6
+    },
+    {
+      "time": "19:47",
+      "active": 56,
+      "pct": 4.5
+    },
+    {
+      "time": "20:47",
+      "active": 46,
+      "pct": 3.7
+    },
+    {
+      "time": "21:47",
       "active": 46,
       "pct": 3.7
     }
   ],
   "trend_history_24h": [
     {
-      "time": "21:31",
+      "time": "21:47",
       "active": 56,
       "pct": 4.5
     },
     {
-      "time": "22:31",
-      "active": 46,
-      "pct": 3.7
-    },
-    {
-      "time": "23:31",
-      "active": 46,
-      "pct": 3.7
-    },
-    {
-      "time": "00:31",
-      "active": 43,
-      "pct": 3.4
-    },
-    {
-      "time": "01:31",
-      "active": 34,
-      "pct": 2.7
-    },
-    {
-      "time": "02:31",
-      "active": 28,
-      "pct": 2.2
-    },
-    {
-      "time": "03:31",
-      "active": 31,
-      "pct": 2.5
-    },
-    {
-      "time": "04:31",
-      "active": 28,
-      "pct": 2.2
-    },
-    {
-      "time": "05:31",
-      "active": 25,
-      "pct": 2.0
-    },
-    {
-      "time": "06:31",
-      "active": 35,
-      "pct": 2.8
-    },
-    {
-      "time": "07:31",
-      "active": 35,
-      "pct": 2.8
-    },
-    {
-      "time": "08:31",
-      "active": 43,
-      "pct": 3.4
-    },
-    {
-      "time": "09:31",
-      "active": 40,
-      "pct": 3.2
-    },
-    {
-      "time": "10:31",
+      "time": "22:47",
       "active": 45,
       "pct": 3.6
     },
     {
-      "time": "11:31",
+      "time": "23:47",
+      "active": 48,
+      "pct": 3.8
+    },
+    {
+      "time": "00:47",
+      "active": 38,
+      "pct": 3.0
+    },
+    {
+      "time": "01:47",
+      "active": 32,
+      "pct": 2.6
+    },
+    {
+      "time": "02:47",
+      "active": 29,
+      "pct": 2.3
+    },
+    {
+      "time": "03:47",
+      "active": 32,
+      "pct": 2.6
+    },
+    {
+      "time": "04:47",
+      "active": 26,
+      "pct": 2.1
+    },
+    {
+      "time": "05:47",
+      "active": 27,
+      "pct": 2.2
+    },
+    {
+      "time": "06:47",
+      "active": 35,
+      "pct": 2.8
+    },
+    {
+      "time": "07:47",
+      "active": 37,
+      "pct": 3.0
+    },
+    {
+      "time": "08:47",
       "active": 40,
       "pct": 3.2
     },
     {
-      "time": "12:31",
-      "active": 49,
-      "pct": 3.9
+      "time": "09:47",
+      "active": 43,
+      "pct": 3.4
     },
     {
-      "time": "13:31",
-      "active": 45,
-      "pct": 3.6
+      "time": "10:47",
+      "active": 40,
+      "pct": 3.2
     },
     {
-      "time": "14:31",
-      "active": 56,
-      "pct": 4.5
-    },
-    {
-      "time": "15:31",
-      "active": 50,
-      "pct": 4.0
-    },
-    {
-      "time": "16:31",
-      "active": 65,
-      "pct": 5.2
-    },
-    {
-      "time": "17:31",
-      "active": 60,
-      "pct": 4.8
-    },
-    {
-      "time": "18:31",
-      "active": 57,
-      "pct": 4.6
-    },
-    {
-      "time": "19:31",
-      "active": 56,
-      "pct": 4.5
-    },
-    {
-      "time": "20:31",
+      "time": "11:47",
       "active": 47,
       "pct": 3.8
     },
     {
-      "time": "21:31",
+      "time": "12:47",
+      "active": 43,
+      "pct": 3.4
+    },
+    {
+      "time": "13:47",
+      "active": 48,
+      "pct": 3.8
+    },
+    {
+      "time": "14:47",
+      "active": 54,
+      "pct": 4.3
+    },
+    {
+      "time": "15:47",
+      "active": 47,
+      "pct": 3.8
+    },
+    {
+      "time": "16:47",
+      "active": 64,
+      "pct": 5.1
+    },
+    {
+      "time": "17:47",
+      "active": 61,
+      "pct": 4.9
+    },
+    {
+      "time": "18:47",
+      "active": 58,
+      "pct": 4.6
+    },
+    {
+      "time": "19:47",
+      "active": 56,
+      "pct": 4.5
+    },
+    {
+      "time": "20:47",
+      "active": 46,
+      "pct": 3.7
+    },
+    {
+      "time": "21:47",
       "active": 46,
       "pct": 3.7
     }
@@ -300,7 +300,7 @@
       "ports_count": 8,
       "active_now": 4,
       "total_sessions_24h": 5,
-      "total_kwh_24h": 112.8,
+      "total_kwh_24h": 114.9,
       "total_duration_min": 109.0,
       "utilization_pct": 0.9
     },
@@ -314,7 +314,7 @@
       "ports_count": 4,
       "active_now": 2,
       "total_sessions_24h": 36,
-      "total_kwh_24h": 788.2,
+      "total_kwh_24h": 811.5,
       "total_duration_min": 1198.4,
       "utilization_pct": 20.8
     },
@@ -327,10 +327,10 @@
       "longitude": 73.931357,
       "ports_count": 3,
       "active_now": 2,
-      "total_sessions_24h": 17,
-      "total_kwh_24h": 450.1,
-      "total_duration_min": 501.4,
-      "utilization_pct": 11.6
+      "total_sessions_24h": 16,
+      "total_kwh_24h": 434.9,
+      "total_duration_min": 475.1,
+      "utilization_pct": 11.0
     },
     {
       "station_id": "ST-4948",
@@ -342,7 +342,7 @@
       "ports_count": 2,
       "active_now": 2,
       "total_sessions_24h": 12,
-      "total_kwh_24h": 321.1,
+      "total_kwh_24h": 339.4,
       "total_duration_min": 307.3,
       "utilization_pct": 10.7
     },
@@ -356,7 +356,7 @@
       "ports_count": 2,
       "active_now": 2,
       "total_sessions_24h": 9,
-      "total_kwh_24h": 223.7,
+      "total_kwh_24h": 236.0,
       "total_duration_min": 171.4,
       "utilization_pct": 6.0
     },
@@ -370,7 +370,7 @@
       "ports_count": 2,
       "active_now": 2,
       "total_sessions_24h": 10,
-      "total_kwh_24h": 160.4,
+      "total_kwh_24h": 169.0,
       "total_duration_min": 265.1,
       "utilization_pct": 9.2
     },
@@ -389,6 +389,20 @@
       "utilization_pct": 0.0
     },
     {
+      "station_id": "ST-11201",
+      "name": "Shell Recharge Vadgaon Sinhagad Rd",
+      "cpo": "Shell Recharge",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.457267,
+      "longitude": 73.80543,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 16,
+      "total_kwh_24h": 493.5,
+      "total_duration_min": 526.1,
+      "utilization_pct": 18.3
+    },
+    {
       "station_id": "ST-8895",
       "name": "BP COCO RTO",
       "cpo": "BPCL",
@@ -403,20 +417,6 @@
       "utilization_pct": 20.6
     },
     {
-      "station_id": "ST-11201",
-      "name": "Shell Recharge Vadgaon Sinhagad Rd",
-      "cpo": "Shell Recharge",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.457267,
-      "longitude": 73.80543,
-      "ports_count": 2,
-      "active_now": 1,
-      "total_sessions_24h": 16,
-      "total_kwh_24h": 476.6,
-      "total_duration_min": 526.1,
-      "utilization_pct": 18.3
-    },
-    {
       "station_id": "ST-8433",
       "name": "EKVIRA PETROLEUM, HADAPSER",
       "cpo": "Statiq",
@@ -426,7 +426,7 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 8,
-      "total_kwh_24h": 317.2,
+      "total_kwh_24h": 322.8,
       "total_duration_min": 324.9,
       "utilization_pct": 11.3
     },
@@ -440,7 +440,7 @@
       "ports_count": 3,
       "active_now": 1,
       "total_sessions_24h": 10,
-      "total_kwh_24h": 259.3,
+      "total_kwh_24h": 276.1,
       "total_duration_min": 308.7,
       "utilization_pct": 7.1
     },
@@ -454,7 +454,7 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 9,
-      "total_kwh_24h": 249.6,
+      "total_kwh_24h": 266.0,
       "total_duration_min": 260.3,
       "utilization_pct": 9.0
     },
@@ -468,23 +468,9 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 11,
-      "total_kwh_24h": 175.5,
+      "total_kwh_24h": 187.2,
       "total_duration_min": 223.7,
       "utilization_pct": 7.8
-    },
-    {
-      "station_id": "ST-16886",
-      "name": "DC Fast Charger-The Social Street",
-      "cpo": "goEgo Network",
-      "location": "The Social Street Sr No 32 Main Hinjewadi Wa",
-      "latitude": 18.590073,
-      "longitude": 73.745625,
-      "ports_count": 2,
-      "active_now": 1,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 125.3,
-      "total_duration_min": 122.6,
-      "utilization_pct": 4.3
     },
     {
       "station_id": "TP-Commercial_MSK_Fasterners_CHINCHWAD",
@@ -496,9 +482,23 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 8,
-      "total_kwh_24h": 122.5,
+      "total_kwh_24h": 134.2,
       "total_duration_min": 207.3,
       "utilization_pct": 14.4
+    },
+    {
+      "station_id": "ST-16886",
+      "name": "DC Fast Charger-The Social Street",
+      "cpo": "goEgo Network",
+      "location": "The Social Street Sr No 32 Main Hinjewadi Wa",
+      "latitude": 18.590073,
+      "longitude": 73.745625,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 125.4,
+      "total_duration_min": 122.6,
+      "utilization_pct": 4.3
     },
     {
       "station_id": "TP-TML_Tata_Motors_Plant_Chikhali",
@@ -510,9 +510,23 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 3,
-      "total_kwh_24h": 108.8,
+      "total_kwh_24h": 111.0,
       "total_duration_min": 422.5,
       "utilization_pct": 14.7
+    },
+    {
+      "station_id": "ST-9002",
+      "name": "GLIDA Kate Central Mall, Pune",
+      "cpo": "Statiq",
+      "location": "Basement -1, S No. 48/1/1, Kate Central Common Meter, Pimpale Gurav, Haveli",
+      "latitude": 18.584247,
+      "longitude": 73.816234,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 85.8,
+      "total_duration_min": 77.8,
+      "utilization_pct": 2.7
     },
     {
       "station_id": "ST-14482",
@@ -524,7 +538,7 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 3,
-      "total_kwh_24h": 81.6,
+      "total_kwh_24h": 83.2,
       "total_duration_min": 895.3,
       "utilization_pct": 62.2
     },
@@ -543,32 +557,18 @@
       "utilization_pct": 6.0
     },
     {
-      "station_id": "ST-9002",
-      "name": "GLIDA Kate Central Mall, Pune",
-      "cpo": "Statiq",
-      "location": "Basement -1, S No. 48/1/1, Kate Central Common Meter, Pimpale Gurav, Haveli",
-      "latitude": 18.584247,
-      "longitude": 73.816234,
-      "ports_count": 2,
-      "active_now": 1,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 69.0,
-      "total_duration_min": 77.8,
-      "utilization_pct": 2.7
-    },
-    {
-      "station_id": "TP-TML_Panchjanya_Automobile_Warje",
-      "name": "Panchjanya Automobile Warje",
+      "station_id": "TP-Hotels_Marigold_Banquet_Bavdhan",
+      "name": "Marigold Banquet Bavdhan",
       "cpo": "Tata Power EZ Charge",
       "location": "PUNE, Maharashtra",
-      "latitude": 18.482688,
-      "longitude": 73.802741,
-      "ports_count": 2,
+      "latitude": 18.506046,
+      "longitude": 73.762598,
+      "ports_count": 1,
       "active_now": 1,
-      "total_sessions_24h": 9,
-      "total_kwh_24h": 63.3,
-      "total_duration_min": 82.4,
-      "utilization_pct": 2.9
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 61.5,
+      "total_duration_min": 97.3,
+      "utilization_pct": 6.8
     },
     {
       "station_id": "ST-13445",
@@ -580,7 +580,7 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 56.6,
+      "total_kwh_24h": 56.7,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -594,7 +594,7 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 2,
-      "total_kwh_24h": 48.7,
+      "total_kwh_24h": 50.3,
       "total_duration_min": 444.8,
       "utilization_pct": 30.9
     },
@@ -706,7 +706,7 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 38.1,
+      "total_kwh_24h": 38.2,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -734,7 +734,7 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 36.2,
+      "total_kwh_24h": 37.0,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -748,7 +748,7 @@
       "ports_count": 3,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 29.4,
+      "total_kwh_24h": 31.1,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -762,7 +762,7 @@
       "ports_count": 5,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 29.2,
+      "total_kwh_24h": 31.0,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -775,10 +775,10 @@
       "longitude": 73.936547,
       "ports_count": 1,
       "active_now": 1,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 28.9,
-      "total_duration_min": 37.3,
-      "utilization_pct": 2.6
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 25.4,
+      "total_duration_min": 14.8,
+      "utilization_pct": 1.0
     },
     {
       "station_id": "ST-16535",
@@ -790,7 +790,7 @@
       "ports_count": 3,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 13.2,
+      "total_kwh_24h": 14.9,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -804,7 +804,7 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 0.4,
+      "total_kwh_24h": 2.1,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -817,10 +817,10 @@
       "longitude": 73.954374,
       "ports_count": 8,
       "active_now": 0,
-      "total_sessions_24h": 19,
-      "total_kwh_24h": 629.9,
-      "total_duration_min": 1779.8,
-      "utilization_pct": 15.4
+      "total_sessions_24h": 17,
+      "total_kwh_24h": 561.0,
+      "total_duration_min": 1698.5,
+      "utilization_pct": 14.7
     },
     {
       "station_id": "ST-11181",
@@ -999,10 +999,10 @@
       "longitude": 73.84718,
       "ports_count": 2,
       "active_now": 0,
-      "total_sessions_24h": 5,
-      "total_kwh_24h": 161.4,
-      "total_duration_min": 167.0,
-      "utilization_pct": 5.8
+      "total_sessions_24h": 4,
+      "total_kwh_24h": 154.7,
+      "total_duration_min": 160.9,
+      "utilization_pct": 5.6
     },
     {
       "station_id": "TP-Ginger_Wakad",
@@ -1187,20 +1187,6 @@
       "utilization_pct": 1.3
     },
     {
-      "station_id": "ST-12100",
-      "name": "MH | Pune | Kundan Hyundai Chinchwad",
-      "cpo": "ChargeZone",
-      "location": "Thermax Chowk G.P, 172, Bharat Ratna Rajiv",
-      "latitude": 18.661829,
-      "longitude": 73.792285,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 78.5,
-      "total_duration_min": 74.8,
-      "utilization_pct": 2.6
-    },
-    {
       "station_id": "TP-Tata_Motors_Ltd_ERC_Pimpri",
       "name": "Tata Motors Ltd ERC Pimpri",
       "cpo": "Tata Power EZ Charge",
@@ -1227,6 +1213,20 @@
       "total_kwh_24h": 76.6,
       "total_duration_min": 183.9,
       "utilization_pct": 6.4
+    },
+    {
+      "station_id": "TP-TML_Panchjanya_Automobile_Warje",
+      "name": "Panchjanya Automobile Warje",
+      "cpo": "Tata Power EZ Charge",
+      "location": "PUNE, Maharashtra",
+      "latitude": 18.482688,
+      "longitude": 73.802741,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 9,
+      "total_kwh_24h": 75.0,
+      "total_duration_min": 101.6,
+      "utilization_pct": 3.5
     },
     {
       "station_id": "ST-16867",
@@ -1283,20 +1283,6 @@
       "total_kwh_24h": 64.6,
       "total_duration_min": 587.1,
       "utilization_pct": 8.2
-    },
-    {
-      "station_id": "TP-Hotels_Marigold_Banquet_Bavdhan",
-      "name": "Marigold Banquet Bavdhan",
-      "cpo": "Tata Power EZ Charge",
-      "location": "PUNE, Maharashtra",
-      "latitude": 18.506046,
-      "longitude": 73.762598,
-      "ports_count": 1,
-      "active_now": 0,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 61.5,
-      "total_duration_min": 97.3,
-      "utilization_pct": 6.8
     },
     {
       "station_id": "ST-16148",
@@ -1465,6 +1451,20 @@
       "total_kwh_24h": 40.5,
       "total_duration_min": 223.3,
       "utilization_pct": 7.8
+    },
+    {
+      "station_id": "ST-12100",
+      "name": "MH | Pune | Kundan Hyundai Chinchwad",
+      "cpo": "ChargeZone",
+      "location": "Thermax Chowk G.P, 172, Bharat Ratna Rajiv",
+      "latitude": 18.661829,
+      "longitude": 73.792285,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 39.0,
+      "total_duration_min": 36.0,
+      "utilization_pct": 1.2
     },
     {
       "station_id": "ST-16988",
@@ -6317,8 +6317,8 @@
           "power_kw": 60.0,
           "rate_inr": 24.0,
           "status": "CHARGING",
-          "duration": "19m 14s",
-          "kwh": "14.4 kWh",
+          "duration": "34m 45s",
+          "kwh": "26.1 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -6334,8 +6334,8 @@
           "power_kw": 60.0,
           "rate_inr": 24.0,
           "status": "CHARGING",
-          "duration": "0s",
-          "kwh": "0.0 kWh",
+          "duration": "15m 31s",
+          "kwh": "11.6 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -6379,8 +6379,8 @@
           "power_kw": 180.0,
           "rate_inr": 24.0,
           "status": "CHARGING",
-          "duration": "34m 28s",
-          "kwh": "37.4 kWh",
+          "duration": "50m 0s",
+          "kwh": "44.2 kWh",
           "allocated_kw": 180.0,
           "effective_kw": 65.0
         },
@@ -6396,8 +6396,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "39m 16s",
-          "kwh": "28.0 kWh",
+          "duration": "54m 47s",
+          "kwh": "34.5 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -8201,7 +8201,7 @@
           "power_kw": 7.0,
           "rate_inr": 18.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -9010,8 +9010,8 @@
           "power_kw": 120.0,
           "rate_inr": 24.99,
           "status": "CHARGING",
-          "duration": "3m 15s",
-          "kwh": "3.5 kWh",
+          "duration": "18m 46s",
+          "kwh": "20.3 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         },
@@ -9213,8 +9213,8 @@
           "power_kw": 120.0,
           "rate_inr": 21.99,
           "status": "CHARGING",
-          "duration": "12m 51s",
-          "kwh": "9.6 kWh",
+          "duration": "28m 22s",
+          "kwh": "21.3 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -9230,8 +9230,8 @@
           "power_kw": 120.0,
           "rate_inr": 21.99,
           "status": "CHARGING",
-          "duration": "34m 28s",
-          "kwh": "25.9 kWh",
+          "duration": "50m 0s",
+          "kwh": "32.5 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -9348,8 +9348,8 @@
           "power_kw": 120.0,
           "rate_inr": 17.99,
           "status": "CHARGING",
-          "duration": "22m 53s",
-          "kwh": "17.2 kWh",
+          "duration": "38m 24s",
+          "kwh": "27.7 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -9365,8 +9365,8 @@
           "power_kw": 120.0,
           "rate_inr": 17.99,
           "status": "CHARGING",
-          "duration": "57m 38s",
-          "kwh": "34.9 kWh",
+          "duration": "1h 13m",
+          "kwh": "36.7 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -9483,8 +9483,8 @@
           "power_kw": 120.0,
           "rate_inr": 21.99,
           "status": "CHARGING",
-          "duration": "2m 2s",
-          "kwh": "2.2 kWh",
+          "duration": "17m 33s",
+          "kwh": "19.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         },
@@ -9528,7 +9528,7 @@
           "power_kw": 120.0,
           "rate_inr": 17.99,
           "status": "CHARGING",
-          "duration": "1h 16m",
+          "duration": "1h 31m",
           "kwh": "48.6 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9635,8 +9635,8 @@
           "power_kw": 120.0,
           "rate_inr": 18.49,
           "status": "CHARGING",
-          "duration": "42m 28s",
-          "kwh": "41.0 kWh",
+          "duration": "58m 0s",
+          "kwh": "46.6 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         }
@@ -9708,8 +9708,8 @@
           "power_kw": 120.0,
           "rate_inr": 24.99,
           "status": "CHARGING",
-          "duration": "20m 2s",
-          "kwh": "21.7 kWh",
+          "duration": "35m 33s",
+          "kwh": "38.1 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         },
@@ -9815,8 +9815,8 @@
           "power_kw": 120.0,
           "rate_inr": 25.0,
           "status": "CHARGING",
-          "duration": "24s",
-          "kwh": "0.4 kWh",
+          "duration": "15m 56s",
+          "kwh": "17.3 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         }
@@ -10445,8 +10445,8 @@
           "power_kw": 60.0,
           "rate_inr": 25.0,
           "status": "CHARGING",
-          "duration": "98h 20m",
-          "kwh": "56.3 kWh",
+          "duration": "98h 36m",
+          "kwh": "56.4 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -12804,8 +12804,8 @@
           "power_kw": 60.0,
           "rate_inr": 18.49,
           "status": "CHARGING",
-          "duration": "18m 26s",
-          "kwh": "13.8 kWh",
+          "duration": "33m 57s",
+          "kwh": "25.5 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -13074,8 +13074,8 @@
           "power_kw": 60.0,
           "rate_inr": 16.52,
           "status": "CHARGING",
-          "duration": "99h 46m",
-          "kwh": "56.6 kWh",
+          "duration": "100h 2m",
+          "kwh": "56.7 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -13119,8 +13119,8 @@
           "power_kw": 60.0,
           "rate_inr": 14.99,
           "status": "CHARGING",
-          "duration": "1h 0m",
-          "kwh": "24.8 kWh",
+          "duration": "1h 16m",
+          "kwh": "26.4 kWh",
           "allocated_kw": 30.0,
           "effective_kw": 27.0
         },
@@ -13136,8 +13136,8 @@
           "power_kw": 60.0,
           "rate_inr": 14.99,
           "status": "CHARGING",
-          "duration": "5m 38s",
-          "kwh": "2.5 kWh",
+          "duration": "21m 9s",
+          "kwh": "9.5 kWh",
           "allocated_kw": 30.0,
           "effective_kw": 27.0
         }
@@ -13988,7 +13988,7 @@
           "power_kw": 7.0,
           "rate_inr": 22.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -14022,8 +14022,8 @@
           "power_kw": 9.0,
           "rate_inr": 22.0,
           "status": "CHARGING",
-          "duration": "2h 35m",
-          "kwh": "10.6 kWh",
+          "duration": "2h 51m",
+          "kwh": "11.7 kWh",
           "allocated_kw": 4.5,
           "effective_kw": 4.1
         },
@@ -14039,8 +14039,8 @@
           "power_kw": 9.0,
           "rate_inr": 22.0,
           "status": "CHARGING",
-          "duration": "2m 26s",
-          "kwh": "0.2 kWh",
+          "duration": "17m 57s",
+          "kwh": "1.2 kWh",
           "allocated_kw": 4.5,
           "effective_kw": 4.1
         },
@@ -14056,7 +14056,7 @@
           "power_kw": 7.0,
           "rate_inr": 22.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -14236,8 +14236,8 @@
           "power_kw": 30.0,
           "rate_inr": 24.99,
           "status": "CHARGING",
-          "duration": "26m 52s",
-          "kwh": "12.1 kWh",
+          "duration": "42m 24s",
+          "kwh": "18.8 kWh",
           "allocated_kw": 30.0,
           "effective_kw": 27.0
         }
@@ -15007,7 +15007,7 @@
           "power_kw": 14.0,
           "rate_inr": 17.18,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 14.0,
           "effective_kw": 6.6
@@ -15148,8 +15148,8 @@
           "power_kw": 9.0,
           "rate_inr": 17.0,
           "status": "CHARGING",
-          "duration": "4h 25m",
-          "kwh": "29.2 kWh",
+          "duration": "4h 41m",
+          "kwh": "31.0 kWh",
           "allocated_kw": 9.0,
           "effective_kw": 6.6
         },
@@ -15566,7 +15566,7 @@
           "power_kw": 14.0,
           "rate_inr": 25.31,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 14.0,
           "effective_kw": 6.6
@@ -15758,7 +15758,7 @@
           "power_kw": 7.0,
           "rate_inr": 10.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -15775,7 +15775,7 @@
           "power_kw": 7.0,
           "rate_inr": 10.0,
           "status": "CHARGING",
-          "duration": "7h 47m",
+          "duration": "8h 3m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -17767,7 +17767,7 @@
           "power_kw": 3.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 3.0,
           "effective_kw": 2.8
@@ -17897,7 +17897,7 @@
           "power_kw": 3.0,
           "rate_inr": 18.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 3.0,
           "effective_kw": 2.8
@@ -17959,7 +17959,7 @@
           "power_kw": 14.0,
           "rate_inr": 19.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 14.0,
           "effective_kw": 6.6
@@ -18725,8 +18725,8 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "2h 0m",
-          "kwh": "13.2 kWh",
+          "duration": "2h 15m",
+          "kwh": "14.9 kWh",
           "allocated_kw": 9.0,
           "effective_kw": 6.6
         }
@@ -19762,7 +19762,7 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 9.0,
           "effective_kw": 6.6
@@ -20957,8 +20957,8 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "4h 27m",
-          "kwh": "29.4 kWh",
+          "duration": "4h 42m",
+          "kwh": "31.1 kWh",
           "allocated_kw": 9.0,
           "effective_kw": 6.6
         }
@@ -21019,7 +21019,7 @@
           "power_kw": 9.0,
           "rate_inr": 13.0,
           "status": "CHARGING",
-          "duration": "99h 46m",
+          "duration": "100h 2m",
           "kwh": "45.0 kWh",
           "allocated_kw": 9.0,
           "effective_kw": 6.6
@@ -21631,8 +21631,8 @@
           "power_kw": 7.0,
           "rate_inr": 20.34,
           "status": "CHARGING",
-          "duration": "24m 54s",
-          "kwh": "2.7 kWh",
+          "duration": "40m 26s",
+          "kwh": "4.3 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
         }
@@ -21659,8 +21659,8 @@
           "power_kw": 7.0,
           "rate_inr": 19.49,
           "status": "CHARGING",
-          "duration": "4m 2s",
-          "kwh": "0.4 kWh",
+          "duration": "19m 33s",
+          "kwh": "2.1 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
         }
@@ -21715,8 +21715,8 @@
           "power_kw": 7.0,
           "rate_inr": 13.56,
           "status": "CHARGING",
-          "duration": "34m 28s",
-          "kwh": "3.7 kWh",
+          "duration": "50m 0s",
+          "kwh": "5.3 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
         }
@@ -24337,8 +24337,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "3m 38s",
-          "kwh": "2.7 kWh",
+          "duration": "19m 10s",
+          "kwh": "14.4 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -24731,7 +24731,7 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "2h 57m",
+          "duration": "3h 13m",
           "kwh": "37.3 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
@@ -25017,8 +25017,8 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
@@ -26849,8 +26849,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "7h 23m",
-          "kwh": "38.1 kWh",
+          "duration": "7h 39m",
+          "kwh": "38.2 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -28186,9 +28186,9 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "CHARGING",
-          "duration": "3m 38s",
-          "kwh": "2.7 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -28535,8 +28535,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "53m 39s",
-          "kwh": "34.0 kWh",
+          "duration": "1h 9m",
+          "kwh": "36.2 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -29138,8 +29138,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "1h 8m",
-          "kwh": "36.2 kWh",
+          "duration": "1h 24m",
+          "kwh": "37.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
