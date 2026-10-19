@@ -1,27 +1,27 @@
 {
-  "timestamp": "2026-10-19T16:34:03.842480",
-  "display_time": "16:34:03",
+  "timestamp": "2026-10-19T17:00:24.302398",
+  "display_time": "17:00:24",
   "feed_network": "STATIQ_TATA_POWER_PUNE_PCMC_CITY_WIDE_FEED",
   "metrics": {
     "total_guns": 1202,
-    "active_charging": 53,
+    "active_charging": 55,
     "available_guns": 876,
-    "faulted_guns": 273,
-    "occupancy_rate_pct": 4.4,
+    "faulted_guns": 271,
+    "occupancy_rate_pct": 4.6,
     "available_pct": 72.9,
-    "operational_health_pct": 77.3,
-    "total_energy_kwh_24h": 5081.9,
-    "lifetime_energy_kwh": 74878.0,
+    "operational_health_pct": 77.5,
+    "total_energy_kwh_24h": 5271.9,
+    "lifetime_energy_kwh": 75473.1,
     "total_sessions_24h": 224,
-    "lifetime_sessions": 3161,
-    "completed_sessions_24h": 171,
-    "lifetime_completed_sessions": 3108,
-    "avg_session_duration_min": 170.3,
-    "lifetime_avg_duration_min": 60.4,
-    "top_station": "Enerva | Shreenath Krupa Complex",
-    "peak_load_pct_24h": 5.4,
-    "peak_load_time_24h": "16:34",
-    "peak_active_guns_24h": 65
+    "lifetime_sessions": 3179,
+    "completed_sessions_24h": 169,
+    "lifetime_completed_sessions": 3124,
+    "avg_session_duration_min": 198.8,
+    "lifetime_avg_duration_min": 61.7,
+    "top_station": "GLIDA City Vista Apartments, Kharadi",
+    "peak_load_pct_24h": 5.2,
+    "peak_load_time_24h": "18:00",
+    "peak_active_guns_24h": 63
   },
   "cpo_distribution": {
     "Statiq": 164,
@@ -36,272 +36,272 @@
   },
   "recent_history": [
     {
-      "time": "16:34",
-      "active": 65,
-      "pct": 5.4
+      "time": "17:00",
+      "active": 61,
+      "pct": 5.1
     },
     {
-      "time": "17:34",
-      "active": 60,
-      "pct": 5.0
+      "time": "18:00",
+      "active": 63,
+      "pct": 5.2
     },
     {
-      "time": "18:34",
-      "active": 56,
-      "pct": 4.7
+      "time": "19:00",
+      "active": 58,
+      "pct": 4.8
     },
     {
-      "time": "19:34",
-      "active": 57,
-      "pct": 4.7
+      "time": "20:00",
+      "active": 53,
+      "pct": 4.4
     },
     {
-      "time": "20:34",
+      "time": "21:00",
+      "active": 44,
+      "pct": 3.7
+    },
+    {
+      "time": "22:00",
       "active": 46,
       "pct": 3.8
     },
     {
-      "time": "21:34",
-      "active": 42,
-      "pct": 3.5
+      "time": "23:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "22:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "00:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "23:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "01:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "00:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "02:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "01:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "03:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "02:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "04:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "03:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "05:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "04:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "06:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "05:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "07:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "06:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "08:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "07:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "09:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "08:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "10:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "09:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "11:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "10:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "12:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "11:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "13:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "12:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "14:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "13:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "15:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "14:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "16:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "15:34",
-      "active": 22,
-      "pct": 1.8
-    },
-    {
-      "time": "16:34",
-      "active": 53,
-      "pct": 4.4
+      "time": "17:00",
+      "active": 55,
+      "pct": 4.6
     }
   ],
   "trend_history_24h": [
     {
-      "time": "16:34",
-      "active": 65,
-      "pct": 5.4
+      "time": "17:00",
+      "active": 61,
+      "pct": 5.1
     },
     {
-      "time": "17:34",
-      "active": 60,
-      "pct": 5.0
+      "time": "18:00",
+      "active": 63,
+      "pct": 5.2
     },
     {
-      "time": "18:34",
-      "active": 56,
-      "pct": 4.7
+      "time": "19:00",
+      "active": 58,
+      "pct": 4.8
     },
     {
-      "time": "19:34",
-      "active": 57,
-      "pct": 4.7
+      "time": "20:00",
+      "active": 53,
+      "pct": 4.4
     },
     {
-      "time": "20:34",
+      "time": "21:00",
+      "active": 44,
+      "pct": 3.7
+    },
+    {
+      "time": "22:00",
       "active": 46,
       "pct": 3.8
     },
     {
-      "time": "21:34",
-      "active": 42,
-      "pct": 3.5
+      "time": "23:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "22:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "00:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "23:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "01:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "00:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "02:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "01:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "03:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "02:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "04:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "03:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "05:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "04:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "06:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "05:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "07:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "06:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "08:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "07:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "09:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "08:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "10:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "09:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "11:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "10:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "12:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "11:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "13:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "12:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "14:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "13:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "15:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "14:34",
-      "active": 22,
-      "pct": 1.8
+      "time": "16:00",
+      "active": 26,
+      "pct": 2.2
     },
     {
-      "time": "15:34",
-      "active": 22,
-      "pct": 1.8
-    },
-    {
-      "time": "16:34",
-      "active": 53,
-      "pct": 4.4
+      "time": "17:00",
+      "active": 55,
+      "pct": 4.6
     }
   ],
   "daily_summary": [
     {
-      "station_id": "ST-18584",
-      "name": "Enerva | Shreenath Krupa Complex",
+      "station_id": "ST-10761",
+      "name": "GLIDA City Vista Apartments, Kharadi",
       "cpo": "Statiq",
-      "location": "Shreenath Krupa Complex",
-      "latitude": 18.594702,
-      "longitude": 73.730814,
+      "location": "SR No. 58(P), 54P, Downtown, Fountain Road, Kharadi",
+      "latitude": 18.56136,
+      "longitude": 73.94497,
       "ports_count": 4,
       "active_now": 3,
-      "total_sessions_24h": 12,
-      "total_kwh_24h": 298.8,
-      "total_duration_min": 1492.6,
-      "utilization_pct": 25.9
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 0.0,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
     },
     {
       "station_id": "ST-16978",
@@ -318,74 +318,46 @@
       "utilization_pct": 22.1
     },
     {
-      "station_id": "ST-11181",
-      "name": "Shell Recharge Pimple Nilakh",
-      "cpo": "Shell Recharge",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.585773,
-      "longitude": 73.781582,
-      "ports_count": 3,
-      "active_now": 2,
-      "total_sessions_24h": 7,
-      "total_kwh_24h": 107.3,
-      "total_duration_min": 135.7,
-      "utilization_pct": 3.1
-    },
-    {
-      "station_id": "ST-15361",
-      "name": "Mitali Service Station",
+      "station_id": "ST-8895",
+      "name": "BP COCO RTO",
       "cpo": "BPCL",
       "location": "Pune / PCMC Corridor",
-      "latitude": 18.482536,
-      "longitude": 73.826713,
+      "latitude": 18.529051,
+      "longitude": 73.862386,
       "ports_count": 2,
       "active_now": 2,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 87.1,
-      "total_duration_min": 36.4,
-      "utilization_pct": 1.3
+      "total_sessions_24h": 5,
+      "total_kwh_24h": 168.6,
+      "total_duration_min": 1362.8,
+      "utilization_pct": 47.3
     },
     {
-      "station_id": "ST-8508",
-      "name": "MH | Pune | ONYX",
-      "cpo": "ChargeZone",
-      "location": "7th floor, ONYX Building, Plot no. 37/3,",
-      "latitude": 18.538198,
-      "longitude": 73.907051,
-      "ports_count": 2,
-      "active_now": 2,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 49.4,
-      "total_duration_min": 82.7,
-      "utilization_pct": 2.9
-    },
-    {
-      "station_id": "ST-16545",
-      "name": "Silver Skyscapes",
-      "cpo": "goEgo Network",
-      "location": "Datta Mandir Rd Shankar Kalat Nagar",
-      "latitude": 18.603044,
-      "longitude": 73.759428,
-      "ports_count": 3,
-      "active_now": 2,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 45.0,
-      "total_duration_min": 0.0,
-      "utilization_pct": 0.0
-    },
-    {
-      "station_id": "ST-11205",
-      "name": "Shell Recharge Sus Road",
+      "station_id": "ST-11201",
+      "name": "Shell Recharge Vadgaon Sinhagad Rd",
       "cpo": "Shell Recharge",
       "location": "Pune / PCMC Corridor",
-      "latitude": 18.551943,
-      "longitude": 73.76083,
+      "latitude": 18.457267,
+      "longitude": 73.80543,
       "ports_count": 2,
       "active_now": 2,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 36.2,
-      "total_duration_min": 32.9,
-      "utilization_pct": 1.1
+      "total_sessions_24h": 7,
+      "total_kwh_24h": 149.1,
+      "total_duration_min": 149.5,
+      "utilization_pct": 5.2
+    },
+    {
+      "station_id": "ST-11182",
+      "name": "Shell Recharge Wagholi",
+      "cpo": "Shell Recharge",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.599081,
+      "longitude": 74.00532,
+      "ports_count": 4,
+      "active_now": 2,
+      "total_sessions_24h": 5,
+      "total_kwh_24h": 109.1,
+      "total_duration_min": 262.3,
+      "utilization_pct": 4.6
     },
     {
       "station_id": "ST-14405",
@@ -397,7 +369,21 @@
       "ports_count": 4,
       "active_now": 2,
       "total_sessions_24h": 2,
-      "total_kwh_24h": 0.8,
+      "total_kwh_24h": 57.8,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
+    },
+    {
+      "station_id": "ST-16545",
+      "name": "Silver Skyscapes",
+      "cpo": "goEgo Network",
+      "location": "Datta Mandir Rd Shankar Kalat Nagar",
+      "latitude": 18.603044,
+      "longitude": 73.759428,
+      "ports_count": 3,
+      "active_now": 2,
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 46.8,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -411,9 +397,23 @@
       "ports_count": 33,
       "active_now": 2,
       "total_sessions_24h": 2,
-      "total_kwh_24h": 0.0,
+      "total_kwh_24h": 3.6,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
+    },
+    {
+      "station_id": "ST-18584",
+      "name": "Enerva | Shreenath Krupa Complex",
+      "cpo": "Statiq",
+      "location": "Shreenath Krupa Complex",
+      "latitude": 18.594702,
+      "longitude": 73.730814,
+      "ports_count": 4,
+      "active_now": 1,
+      "total_sessions_24h": 12,
+      "total_kwh_24h": 338.3,
+      "total_duration_min": 2707.3,
+      "utilization_pct": 47.0
     },
     {
       "station_id": "ST-5204",
@@ -425,51 +425,93 @@
       "ports_count": 3,
       "active_now": 1,
       "total_sessions_24h": 8,
-      "total_kwh_24h": 234.7,
+      "total_kwh_24h": 234.8,
       "total_duration_min": 1347.2,
       "utilization_pct": 31.2
     },
     {
-      "station_id": "ST-8895",
-      "name": "BP COCO RTO",
+      "station_id": "ST-11184",
+      "name": "Shell Recharge Uruli 2",
+      "cpo": "Shell Recharge",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.457166,
+      "longitude": 73.945214,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 6,
+      "total_kwh_24h": 142.9,
+      "total_duration_min": 185.3,
+      "utilization_pct": 6.4
+    },
+    {
+      "station_id": "ST-11181",
+      "name": "Shell Recharge Pimple Nilakh",
+      "cpo": "Shell Recharge",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.585773,
+      "longitude": 73.781582,
+      "ports_count": 3,
+      "active_now": 1,
+      "total_sessions_24h": 6,
+      "total_kwh_24h": 124.0,
+      "total_duration_min": 121.2,
+      "utilization_pct": 2.8
+    },
+    {
+      "station_id": "ST-8251",
+      "name": "B P EXPRESSWAY FOOD COURT ",
       "cpo": "BPCL",
       "location": "Pune / PCMC Corridor",
-      "latitude": 18.529051,
-      "longitude": 73.862386,
+      "latitude": 18.712416,
+      "longitude": 73.653228,
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 5,
-      "total_kwh_24h": 197.6,
-      "total_duration_min": 1439.6,
-      "utilization_pct": 50.0
+      "total_kwh_24h": 110.8,
+      "total_duration_min": 1262.3,
+      "utilization_pct": 43.8
     },
     {
-      "station_id": "ST-8433",
-      "name": "EKVIRA PETROLEUM, HADAPSER",
-      "cpo": "Statiq",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.50643,
-      "longitude": 73.91132,
+      "station_id": "ST-8508",
+      "name": "MH | Pune | ONYX",
+      "cpo": "ChargeZone",
+      "location": "7th floor, ONYX Building, Plot no. 37/3,",
+      "latitude": 18.538198,
+      "longitude": 73.907051,
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 3,
-      "total_kwh_24h": 143.5,
-      "total_duration_min": 122.0,
-      "utilization_pct": 4.2
+      "total_kwh_24h": 106.5,
+      "total_duration_min": 109.4,
+      "utilization_pct": 3.8
     },
     {
-      "station_id": "ST-11182",
-      "name": "Shell Recharge Wagholi",
-      "cpo": "Shell Recharge",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.599081,
-      "longitude": 74.00532,
-      "ports_count": 4,
+      "station_id": "ST-8188",
+      "name": "MH | Pune | Arya EV PCS",
+      "cpo": "Statiq",
+      "location": "1344/3, Grant Road, Near Phoenix School,",
+      "latitude": 18.56399,
+      "longitude": 73.954374,
+      "ports_count": 8,
       "active_now": 1,
       "total_sessions_24h": 5,
-      "total_kwh_24h": 137.8,
-      "total_duration_min": 335.5,
-      "utilization_pct": 5.8
+      "total_kwh_24h": 100.6,
+      "total_duration_min": 128.0,
+      "utilization_pct": 1.1
+    },
+    {
+      "station_id": "ST-9002",
+      "name": "GLIDA Kate Central Mall, Pune",
+      "cpo": "Statiq",
+      "location": "Basement -1, S No. 48/1/1, Kate Central Common Meter, Pimpale Gurav, Haveli",
+      "latitude": 18.584247,
+      "longitude": 73.816234,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 98.9,
+      "total_duration_min": 1203.4,
+      "utilization_pct": 41.8
     },
     {
       "station_id": "ST-17653",
@@ -481,9 +523,65 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 4,
-      "total_kwh_24h": 76.9,
+      "total_kwh_24h": 96.6,
       "total_duration_min": 183.9,
       "utilization_pct": 6.4
+    },
+    {
+      "station_id": "ST-2865",
+      "name": "Statiq Nexus Westend Mall Station",
+      "cpo": "Statiq",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.561817,
+      "longitude": 73.806984,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 88.9,
+      "total_duration_min": 120.7,
+      "utilization_pct": 4.2
+    },
+    {
+      "station_id": "ST-8657",
+      "name": "MH | Pune | Novotel Hotel",
+      "cpo": "ChargeZone",
+      "location": "Weikfield It City Infopark Nagar, Maharashtra",
+      "latitude": 18.558626,
+      "longitude": 73.910725,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 4,
+      "total_kwh_24h": 85.9,
+      "total_duration_min": 79.3,
+      "utilization_pct": 2.8
+    },
+    {
+      "station_id": "ST-15361",
+      "name": "Mitali Service Station",
+      "cpo": "BPCL",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.482536,
+      "longitude": 73.826713,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 67.7,
+      "total_duration_min": 36.4,
+      "utilization_pct": 1.3
+    },
+    {
+      "station_id": "ST-4927",
+      "name": "GLIDA Hyatt Regency Pune",
+      "cpo": "Statiq",
+      "location": "Weikfield IT Park, Nagar Road",
+      "latitude": 18.559788,
+      "longitude": 73.911839,
+      "ports_count": 4,
+      "active_now": 1,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 62.0,
+      "total_duration_min": 57.2,
+      "utilization_pct": 1.0
     },
     {
       "station_id": "ST-13445",
@@ -495,7 +593,7 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 60.4,
+      "total_kwh_24h": 60.5,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -509,22 +607,22 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 60.1,
+      "total_kwh_24h": 60.2,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
     {
-      "station_id": "ST-8657",
-      "name": "MH | Pune | Novotel Hotel",
-      "cpo": "ChargeZone",
-      "location": "Weikfield It City Infopark Nagar, Maharashtra",
-      "latitude": 18.558626,
-      "longitude": 73.910725,
-      "ports_count": 2,
+      "station_id": "ST-11232",
+      "name": "Shell Recharge Hinjewadi",
+      "cpo": "Shell Recharge",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.590625,
+      "longitude": 73.74117,
+      "ports_count": 3,
       "active_now": 1,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 57.3,
-      "total_duration_min": 52.6,
+      "total_sessions_24h": 4,
+      "total_kwh_24h": 59.1,
+      "total_duration_min": 78.8,
       "utilization_pct": 1.8
     },
     {
@@ -537,22 +635,22 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 4,
-      "total_kwh_24h": 45.7,
+      "total_kwh_24h": 57.5,
       "total_duration_min": 113.7,
       "utilization_pct": 7.9
     },
     {
-      "station_id": "ST-17900",
-      "name": "LEVICON07",
-      "cpo": "Statiq",
-      "location": "40, Sasoon Rd, Sangamvadi, Pune, Maharashtra 411001, India",
-      "latitude": 18.533584,
-      "longitude": 73.877157,
+      "station_id": "ST-8530",
+      "name": "MH | Pune | R R Kirad Hyundai",
+      "cpo": "ChargeZone",
+      "location": "Survey No. 80, 2/3,4,5, Jaymala Business",
+      "latitude": 18.497866,
+      "longitude": 73.961178,
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 2,
-      "total_kwh_24h": 45.6,
-      "total_duration_min": 52.5,
+      "total_kwh_24h": 45.0,
+      "total_duration_min": 52.0,
       "utilization_pct": 1.8
     },
     {
@@ -668,76 +766,6 @@
       "utilization_pct": 0.0
     },
     {
-      "station_id": "TP-Hotels_Marigold_Banquet_Bavdhan",
-      "name": "Marigold Banquet Bavdhan",
-      "cpo": "Tata Power EZ Charge",
-      "location": "PUNE, Maharashtra",
-      "latitude": 18.506046,
-      "longitude": 73.762598,
-      "ports_count": 1,
-      "active_now": 1,
-      "total_sessions_24h": 1,
-      "total_kwh_24h": 40.4,
-      "total_duration_min": 0.0,
-      "utilization_pct": 0.0
-    },
-    {
-      "station_id": "ST-4927",
-      "name": "GLIDA Hyatt Regency Pune",
-      "cpo": "Statiq",
-      "location": "Weikfield IT Park, Nagar Road",
-      "latitude": 18.559788,
-      "longitude": 73.911839,
-      "ports_count": 4,
-      "active_now": 1,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 33.4,
-      "total_duration_min": 30.5,
-      "utilization_pct": 0.5
-    },
-    {
-      "station_id": "TP-KIA_Crystal_Kia",
-      "name": "Crystal Kia Axis Centra",
-      "cpo": "Tata Power EZ Charge",
-      "location": "PUNE, Maharashtra",
-      "latitude": 18.5573364,
-      "longitude": 73.7705413,
-      "ports_count": 2,
-      "active_now": 1,
-      "total_sessions_24h": 4,
-      "total_kwh_24h": 30.1,
-      "total_duration_min": 39.8,
-      "utilization_pct": 1.4
-    },
-    {
-      "station_id": "ST-8506",
-      "name": "MH | Pune | Fairfield by Marriott Pune Kharadi",
-      "cpo": "ChargeZone",
-      "location": "Mundhwa - Kharadi Rd, Thite Nagar, Kharadi,",
-      "latitude": 18.546072,
-      "longitude": 73.936547,
-      "ports_count": 1,
-      "active_now": 1,
-      "total_sessions_24h": 1,
-      "total_kwh_24h": 30.1,
-      "total_duration_min": 0.0,
-      "utilization_pct": 0.0
-    },
-    {
-      "station_id": "TP-TML_Rudra_Motors_Viman_Nagar",
-      "name": "TML Rudra Motors, Viman Nagar",
-      "cpo": "Tata Power EZ Charge",
-      "location": "Pune, Maharashtra",
-      "latitude": 18.556641,
-      "longitude": 73.907557,
-      "ports_count": 1,
-      "active_now": 1,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 19.0,
-      "total_duration_min": 24.9,
-      "utilization_pct": 1.7
-    },
-    {
       "station_id": "TP-Bridgestone_Super_Tyre_Bridgestone_Select_Shirur",
       "name": "Super Tyre Bridgestone Select Shirur",
       "cpo": "Tata Power EZ Charge",
@@ -747,51 +775,9 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 2,
-      "total_kwh_24h": 11.7,
+      "total_kwh_24h": 31.4,
       "total_duration_min": 15.2,
       "utilization_pct": 1.1
-    },
-    {
-      "station_id": "ST-17005",
-      "name": "Phoenix Mall, Viman Nagar Pune",
-      "cpo": "goEgo Network",
-      "location": "Phoenix Mall  Viman nagar",
-      "latitude": 18.562294,
-      "longitude": 73.916245,
-      "ports_count": 5,
-      "active_now": 1,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 6.7,
-      "total_duration_min": 61.0,
-      "utilization_pct": 0.8
-    },
-    {
-      "station_id": "ST-16980",
-      "name": "Aditya English Medium School- EV Charger",
-      "cpo": "goEgo Network",
-      "location": "Aditya English Medium School Dhankunde Nagar",
-      "latitude": 18.561904,
-      "longitude": 73.781382,
-      "ports_count": 6,
-      "active_now": 1,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 5.1,
-      "total_duration_min": 109.3,
-      "utilization_pct": 1.3
-    },
-    {
-      "station_id": "TP-Ginger_Wakad",
-      "name": "Ginger Hotel, Wakad",
-      "cpo": "Tata Power EZ Charge",
-      "location": "Pune, Maharashtra",
-      "latitude": 18.60671,
-      "longitude": 73.75247,
-      "ports_count": 1,
-      "active_now": 1,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 4.2,
-      "total_duration_min": 5.2,
-      "utilization_pct": 0.4
     },
     {
       "station_id": "ST-10385",
@@ -803,21 +789,7 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 0.4,
-      "total_duration_min": 0.0,
-      "utilization_pct": 0.0
-    },
-    {
-      "station_id": "ST-16148",
-      "name": "Sai Gauri Petroleum",
-      "cpo": "BPCL",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.598519,
-      "longitude": 73.828094,
-      "ports_count": 2,
-      "active_now": 1,
-      "total_sessions_24h": 1,
-      "total_kwh_24h": 0.3,
+      "total_kwh_24h": 28.9,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -831,7 +803,7 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 0.3,
+      "total_kwh_24h": 20.0,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -845,7 +817,7 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 0.3,
+      "total_kwh_24h": 20.0,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -859,7 +831,7 @@
       "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 0.3,
+      "total_kwh_24h": 20.0,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
     },
@@ -873,9 +845,37 @@
       "ports_count": 2,
       "active_now": 1,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 0.3,
+      "total_kwh_24h": 20.0,
       "total_duration_min": 0.0,
       "utilization_pct": 0.0
+    },
+    {
+      "station_id": "ST-17005",
+      "name": "Phoenix Mall, Viman Nagar Pune",
+      "cpo": "goEgo Network",
+      "location": "Phoenix Mall  Viman nagar",
+      "latitude": 18.562294,
+      "longitude": 73.916245,
+      "ports_count": 5,
+      "active_now": 1,
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 9.6,
+      "total_duration_min": 61.0,
+      "utilization_pct": 0.8
+    },
+    {
+      "station_id": "ST-11183",
+      "name": "Shell Recharge Chikhali Exit",
+      "cpo": "Shell Recharge",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.681525,
+      "longitude": 73.830138,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 9.2,
+      "total_duration_min": 8.5,
+      "utilization_pct": 0.3
     },
     {
       "station_id": "ST-17013",
@@ -885,6 +885,48 @@
       "latitude": 18.550106,
       "longitude": 73.773323,
       "ports_count": 19,
+      "active_now": 1,
+      "total_sessions_24h": 1,
+      "total_kwh_24h": 2.9,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
+    },
+    {
+      "station_id": "ST-8380",
+      "name": "RAJENDRA fuel center",
+      "cpo": "BPCL",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.48928,
+      "longitude": 74.03609,
+      "ports_count": 2,
+      "active_now": 1,
+      "total_sessions_24h": 1,
+      "total_kwh_24h": 0.0,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
+    },
+    {
+      "station_id": "ST-14129",
+      "name": "Building 2 - 4W",
+      "cpo": "Statiq",
+      "location": "Phursungi, Pune, Maharashtra 412308, India",
+      "latitude": 18.490864,
+      "longitude": 73.951992,
+      "ports_count": 1,
+      "active_now": 1,
+      "total_sessions_24h": 1,
+      "total_kwh_24h": 0.0,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
+    },
+    {
+      "station_id": "TP-TPC_CP_Pruthviraj_Shantilal_Luniya",
+      "name": "Pruthviraj Shantilal Luniya",
+      "cpo": "Tata Power EZ Charge",
+      "location": "PUNE, Maharashtra",
+      "latitude": 18.532688,
+      "longitude": 73.939159,
+      "ports_count": 1,
       "active_now": 1,
       "total_sessions_24h": 1,
       "total_kwh_24h": 0.0,
@@ -906,48 +948,6 @@
       "utilization_pct": 83.6
     },
     {
-      "station_id": "ST-11201",
-      "name": "Shell Recharge Vadgaon Sinhagad Rd",
-      "cpo": "Shell Recharge",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.457267,
-      "longitude": 73.80543,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 5,
-      "total_kwh_24h": 149.1,
-      "total_duration_min": 149.5,
-      "utilization_pct": 5.2
-    },
-    {
-      "station_id": "ST-11184",
-      "name": "Shell Recharge Uruli 2",
-      "cpo": "Shell Recharge",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.457166,
-      "longitude": 73.945214,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 5,
-      "total_kwh_24h": 142.9,
-      "total_duration_min": 185.3,
-      "utilization_pct": 6.4
-    },
-    {
-      "station_id": "ST-7845",
-      "name": "MH | Pune | MB#B U Bhandari Motors Pune",
-      "cpo": "Statiq",
-      "location": "Bhandari Motors Mercedes Benz, Veerbhadra",
-      "latitude": 18.563686,
-      "longitude": 73.767344,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 4,
-      "total_kwh_24h": 142.3,
-      "total_duration_min": 152.7,
-      "utilization_pct": 5.3
-    },
-    {
       "station_id": "ST-11180",
       "name": "Shell Recharge Chakan ",
       "cpo": "Shell Recharge",
@@ -960,20 +960,6 @@
       "total_kwh_24h": 124.1,
       "total_duration_min": 132.6,
       "utilization_pct": 4.6
-    },
-    {
-      "station_id": "ST-8251",
-      "name": "B P EXPRESSWAY FOOD COURT ",
-      "cpo": "BPCL",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.712416,
-      "longitude": 73.653228,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 5,
-      "total_kwh_24h": 123.5,
-      "total_duration_min": 1279.3,
-      "utilization_pct": 44.4
     },
     {
       "station_id": "TP-TML_Rudra_Wagholi",
@@ -990,6 +976,20 @@
       "utilization_pct": 10.9
     },
     {
+      "station_id": "ST-7845",
+      "name": "MH | Pune | MB#B U Bhandari Motors Pune",
+      "cpo": "Statiq",
+      "location": "Bhandari Motors Mercedes Benz, Veerbhadra",
+      "latitude": 18.563686,
+      "longitude": 73.767344,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 101.8,
+      "total_duration_min": 111.5,
+      "utilization_pct": 3.9
+    },
+    {
       "station_id": "ST-8505",
       "name": "MH | Pune | Courtyard by Marriott Pune Hinjewadi",
       "cpo": "ChargeZone",
@@ -1002,34 +1002,6 @@
       "total_kwh_24h": 100.8,
       "total_duration_min": 1240.9,
       "utilization_pct": 43.1
-    },
-    {
-      "station_id": "ST-8188",
-      "name": "MH | Pune | Arya EV PCS",
-      "cpo": "Statiq",
-      "location": "1344/3, Grant Road, Near Phoenix School,",
-      "latitude": 18.56399,
-      "longitude": 73.954374,
-      "ports_count": 8,
-      "active_now": 0,
-      "total_sessions_24h": 4,
-      "total_kwh_24h": 100.6,
-      "total_duration_min": 128.0,
-      "utilization_pct": 1.1
-    },
-    {
-      "station_id": "ST-9002",
-      "name": "GLIDA Kate Central Mall, Pune",
-      "cpo": "Statiq",
-      "location": "Basement -1, S No. 48/1/1, Kate Central Common Meter, Pimpale Gurav, Haveli",
-      "latitude": 18.584247,
-      "longitude": 73.816234,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 98.9,
-      "total_duration_min": 1203.4,
-      "utilization_pct": 41.8
     },
     {
       "station_id": "ST-11233",
@@ -1046,6 +1018,34 @@
       "utilization_pct": 3.1
     },
     {
+      "station_id": "ST-8433",
+      "name": "EKVIRA PETROLEUM, HADAPSER",
+      "cpo": "Statiq",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.50643,
+      "longitude": 73.91132,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 95.0,
+      "total_duration_min": 1257.6,
+      "utilization_pct": 43.7
+    },
+    {
+      "station_id": "ST-11205",
+      "name": "Shell Recharge Sus Road",
+      "cpo": "Shell Recharge",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.551943,
+      "longitude": 73.76083,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 93.5,
+      "total_duration_min": 86.3,
+      "utilization_pct": 3.0
+    },
+    {
       "station_id": "ST-11204",
       "name": "Shell Recharge Talegaon",
       "cpo": "Shell Recharge",
@@ -1054,10 +1054,10 @@
       "longitude": 73.70119,
       "ports_count": 4,
       "active_now": 0,
-      "total_sessions_24h": 5,
-      "total_kwh_24h": 92.8,
-      "total_duration_min": 87.2,
-      "utilization_pct": 1.5
+      "total_sessions_24h": 4,
+      "total_kwh_24h": 82.2,
+      "total_duration_min": 77.4,
+      "utilization_pct": 1.3
     },
     {
       "station_id": "TP-Commercial_MSK_Fasterners_CHINCHWAD",
@@ -1068,24 +1068,10 @@
       "longitude": 73.805385,
       "ports_count": 1,
       "active_now": 0,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 89.6,
-      "total_duration_min": 1245.8,
-      "utilization_pct": 86.5
-    },
-    {
-      "station_id": "ST-2865",
-      "name": "Statiq Nexus Westend Mall Station",
-      "cpo": "Statiq",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.561817,
-      "longitude": 73.806984,
-      "ports_count": 2,
-      "active_now": 0,
       "total_sessions_24h": 2,
-      "total_kwh_24h": 88.9,
-      "total_duration_min": 120.7,
-      "utilization_pct": 4.2
+      "total_kwh_24h": 77.4,
+      "total_duration_min": 1229.6,
+      "utilization_pct": 85.4
     },
     {
       "station_id": "TP-TML_Panchjanya_Motors_Chinchwad_Ram_Nagar_Charging_Station",
@@ -1102,20 +1088,6 @@
       "utilization_pct": 9.9
     },
     {
-      "station_id": "ST-11232",
-      "name": "Shell Recharge Hinjewadi",
-      "cpo": "Shell Recharge",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.590625,
-      "longitude": 73.74117,
-      "ports_count": 3,
-      "active_now": 0,
-      "total_sessions_24h": 3,
-      "total_kwh_24h": 59.1,
-      "total_duration_min": 78.8,
-      "utilization_pct": 1.8
-    },
-    {
       "station_id": "TP-Residential_Blue_Ridge_Unit_B_CHSL_Hingewadi",
       "name": "Blue Ridge Unit B CHSL Hingewadi (Private Charger)",
       "cpo": "Tata Power EZ Charge",
@@ -1130,6 +1102,20 @@
       "utilization_pct": 2.8
     },
     {
+      "station_id": "TP-KIA_Crystal_Kia",
+      "name": "Crystal Kia Axis Centra",
+      "cpo": "Tata Power EZ Charge",
+      "location": "PUNE, Maharashtra",
+      "latitude": 18.5573364,
+      "longitude": 73.7705413,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 45.5,
+      "total_duration_min": 60.7,
+      "utilization_pct": 2.1
+    },
+    {
       "station_id": "ST-10148",
       "name": "Statiq Holiday Inn Express Pimpri Station",
       "cpo": "Statiq",
@@ -1141,20 +1127,6 @@
       "total_sessions_24h": 1,
       "total_kwh_24h": 45.5,
       "total_duration_min": 53.2,
-      "utilization_pct": 1.8
-    },
-    {
-      "station_id": "ST-8530",
-      "name": "MH | Pune | R R Kirad Hyundai",
-      "cpo": "ChargeZone",
-      "location": "Survey No. 80, 2/3,4,5, Jaymala Business",
-      "latitude": 18.497866,
-      "longitude": 73.961178,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 1,
-      "total_kwh_24h": 45.0,
-      "total_duration_min": 52.0,
       "utilization_pct": 1.8
     },
     {
@@ -1298,6 +1270,20 @@
       "utilization_pct": 41.5
     },
     {
+      "station_id": "TP-Hotels_Marigold_Banquet_Bavdhan",
+      "name": "Marigold Banquet Bavdhan",
+      "cpo": "Tata Power EZ Charge",
+      "location": "PUNE, Maharashtra",
+      "latitude": 18.506046,
+      "longitude": 73.762598,
+      "ports_count": 1,
+      "active_now": 0,
+      "total_sessions_24h": 1,
+      "total_kwh_24h": 40.5,
+      "total_duration_min": 1153.3,
+      "utilization_pct": 80.1
+    },
+    {
       "station_id": "TP-TML_Panchjanya_Automobile_Warje",
       "name": "Panchjanya Automobile Warje",
       "cpo": "Tata Power EZ Charge",
@@ -1312,18 +1298,32 @@
       "utilization_pct": 1.9
     },
     {
-      "station_id": "ST-8529",
-      "name": "MH | Pune | JW Marriott - Pune",
-      "cpo": "ChargeZone",
-      "location": "Senapati Bapat Rd, Laxmi Society, Model",
-      "latitude": 18.531802,
-      "longitude": 73.82932,
-      "ports_count": 3,
+      "station_id": "TP-TML_Rudra_Motors_Viman_Nagar",
+      "name": "TML Rudra Motors, Viman Nagar",
+      "cpo": "Tata Power EZ Charge",
+      "location": "Pune, Maharashtra",
+      "latitude": 18.556641,
+      "longitude": 73.907557,
+      "ports_count": 1,
       "active_now": 0,
       "total_sessions_24h": 2,
-      "total_kwh_24h": 32.9,
-      "total_duration_min": 30.3,
-      "utilization_pct": 0.7
+      "total_kwh_24h": 38.7,
+      "total_duration_min": 51.7,
+      "utilization_pct": 3.6
+    },
+    {
+      "station_id": "ST-8506",
+      "name": "MH | Pune | Fairfield by Marriott Pune Kharadi",
+      "cpo": "ChargeZone",
+      "location": "Mundhwa - Kharadi Rd, Thite Nagar, Kharadi,",
+      "latitude": 18.546072,
+      "longitude": 73.936547,
+      "ports_count": 1,
+      "active_now": 0,
+      "total_sessions_24h": 1,
+      "total_kwh_24h": 30.1,
+      "total_duration_min": 1195.7,
+      "utilization_pct": 83.0
     },
     {
       "station_id": "ST-17658",
@@ -1338,20 +1338,6 @@
       "total_kwh_24h": 29.9,
       "total_duration_min": 41.0,
       "utilization_pct": 2.8
-    },
-    {
-      "station_id": "ST-11183",
-      "name": "Shell Recharge Chikhali Exit",
-      "cpo": "Shell Recharge",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.681525,
-      "longitude": 73.830138,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 27.7,
-      "total_duration_min": 25.5,
-      "utilization_pct": 0.9
     },
     {
       "station_id": "ST-1586",
@@ -1382,18 +1368,32 @@
       "utilization_pct": 1.1
     },
     {
-      "station_id": "ST-8507",
-      "name": "MH | Pune | Marriott Suites",
-      "cpo": "ChargeZone",
-      "location": "81, Mundhwa Rd, Koregaon Park Annexe,",
-      "latitude": 18.532617,
-      "longitude": 73.910296,
+      "station_id": "TP-Ginger_Wakad",
+      "name": "Ginger Hotel, Wakad",
+      "cpo": "Tata Power EZ Charge",
+      "location": "Pune, Maharashtra",
+      "latitude": 18.60671,
+      "longitude": 73.75247,
       "ports_count": 1,
       "active_now": 0,
-      "total_sessions_24h": 2,
+      "total_sessions_24h": 3,
       "total_kwh_24h": 24.0,
-      "total_duration_min": 53.3,
-      "utilization_pct": 3.7
+      "total_duration_min": 32.0,
+      "utilization_pct": 2.2
+    },
+    {
+      "station_id": "ST-16148",
+      "name": "Sai Gauri Petroleum",
+      "cpo": "BPCL",
+      "location": "Pune / PCMC Corridor",
+      "latitude": 18.598519,
+      "longitude": 73.828094,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 1,
+      "total_kwh_24h": 20.0,
+      "total_duration_min": 26.7,
+      "utilization_pct": 0.9
     },
     {
       "station_id": "ST-13139",
@@ -1404,10 +1404,10 @@
       "longitude": 73.742139,
       "ports_count": 2,
       "active_now": 0,
-      "total_sessions_24h": 4,
-      "total_kwh_24h": 20.9,
-      "total_duration_min": 27.8,
-      "utilization_pct": 1.0
+      "total_sessions_24h": 3,
+      "total_kwh_24h": 18.1,
+      "total_duration_min": 24.1,
+      "utilization_pct": 0.8
     },
     {
       "station_id": "ST-8932",
@@ -1421,20 +1421,6 @@
       "total_sessions_24h": 1,
       "total_kwh_24h": 15.5,
       "total_duration_min": 20.7,
-      "utilization_pct": 0.7
-    },
-    {
-      "station_id": "TP-TML_TML_Shaw_Motors_Workshop_Mundhwa",
-      "name": "TML Shaw Motors Workshop, Mundhwa",
-      "cpo": "Tata Power EZ Charge",
-      "location": "PUNE, Maharashtra",
-      "latitude": 18.528884,
-      "longitude": 73.934355,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 1,
-      "total_kwh_24h": 14.2,
-      "total_duration_min": 19.0,
       "utilization_pct": 0.7
     },
     {
@@ -1452,18 +1438,18 @@
       "utilization_pct": 0.5
     },
     {
-      "station_id": "ST-17037",
-      "name": "MIT-ADT University, Loni Kalbhor Pune",
-      "cpo": "goEgo Network",
-      "location": "MIT ADT University Loni Kalbhor",
-      "latitude": 18.495016,
-      "longitude": 74.022347,
-      "ports_count": 24,
+      "station_id": "ST-8507",
+      "name": "MH | Pune | Marriott Suites",
+      "cpo": "ChargeZone",
+      "location": "81, Mundhwa Rd, Koregaon Park Annexe,",
+      "latitude": 18.532617,
+      "longitude": 73.910296,
+      "ports_count": 1,
       "active_now": 0,
       "total_sessions_24h": 1,
-      "total_kwh_24h": 10.0,
-      "total_duration_min": 91.0,
-      "utilization_pct": 0.3
+      "total_kwh_24h": 9.8,
+      "total_duration_min": 21.8,
+      "utilization_pct": 1.5
     },
     {
       "station_id": "ST-11206",
@@ -1494,6 +1480,20 @@
       "utilization_pct": 0.3
     },
     {
+      "station_id": "ST-16980",
+      "name": "Aditya English Medium School- EV Charger",
+      "cpo": "goEgo Network",
+      "location": "Aditya English Medium School Dhankunde Nagar",
+      "latitude": 18.561904,
+      "longitude": 73.781382,
+      "ports_count": 6,
+      "active_now": 0,
+      "total_sessions_24h": 2,
+      "total_kwh_24h": 6.3,
+      "total_duration_min": 136.0,
+      "utilization_pct": 1.6
+    },
+    {
       "station_id": "TP-PVT_Raskar_Dadaso_Arunrao_Khalad",
       "name": "Raskar Dadaso Arunrao Khalad",
       "cpo": "Tata Power EZ Charge",
@@ -1522,20 +1522,6 @@
       "utilization_pct": 0.2
     },
     {
-      "station_id": "TP-Nayara_Morya_Transport_Terminus_MIDC_Bhosari",
-      "name": "Morya Transport Terminus MIDC Bhosari Charging Station",
-      "cpo": "Tata Power EZ Charge",
-      "location": "Pune, Maharashtra",
-      "latitude": 18.621396,
-      "longitude": 73.8384375,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 2,
-      "total_kwh_24h": 2.2,
-      "total_duration_min": 2.9,
-      "utilization_pct": 0.1
-    },
-    {
       "station_id": "TP-IOCL_Trishul_Service_Station_Pimpri_Chinchwad_Pune",
       "name": "IOCL Trishul Service Station",
       "cpo": "Tata Power EZ Charge",
@@ -1548,6 +1534,20 @@
       "total_kwh_24h": 1.5,
       "total_duration_min": 2.0,
       "utilization_pct": 0.1
+    },
+    {
+      "station_id": "ST-8529",
+      "name": "MH | Pune | JW Marriott - Pune",
+      "cpo": "ChargeZone",
+      "location": "Senapati Bapat Rd, Laxmi Society, Model",
+      "latitude": 18.531802,
+      "longitude": 73.82932,
+      "ports_count": 3,
+      "active_now": 0,
+      "total_sessions_24h": 1,
+      "total_kwh_24h": 1.3,
+      "total_duration_min": 1.2,
+      "utilization_pct": 0.0
     },
     {
       "station_id": "TP-Metro_Pune_Metro_Station_9",
@@ -1620,13 +1620,13 @@
       "utilization_pct": 0.0
     },
     {
-      "station_id": "ST-10761",
-      "name": "GLIDA City Vista Apartments, Kharadi",
+      "station_id": "ST-17995",
+      "name": "MH | PUNE | 7 Seas EV Charging Station",
       "cpo": "Statiq",
-      "location": "SR No. 58(P), 54P, Downtown, Fountain Road, Kharadi",
-      "latitude": 18.56136,
-      "longitude": 73.94497,
-      "ports_count": 4,
+      "location": "THORAVE HOUSE, BIBWEWADI KONDHWA ROAD, PUNE",
+      "latitude": 18.480784,
+      "longitude": 73.863205,
+      "ports_count": 2,
       "active_now": 0,
       "total_sessions_24h": 0,
       "total_kwh_24h": 0.0,
@@ -1634,12 +1634,12 @@
       "utilization_pct": 0.0
     },
     {
-      "station_id": "ST-17995",
-      "name": "MH | PUNE | 7 Seas EV Charging Station",
+      "station_id": "ST-17900",
+      "name": "LEVICON07",
       "cpo": "Statiq",
-      "location": "THORAVE HOUSE, BIBWEWADI KONDHWA ROAD, PUNE",
-      "latitude": 18.480784,
-      "longitude": 73.863205,
+      "location": "40, Sasoon Rd, Sangamvadi, Pune, Maharashtra 411001, India",
+      "latitude": 18.533584,
+      "longitude": 73.877157,
       "ports_count": 2,
       "active_now": 0,
       "total_sessions_24h": 0,
@@ -1710,20 +1710,6 @@
       "location": "Sr.No.15,Plot No.1, Opp.Gold",
       "latitude": 18.546181,
       "longitude": 73.90628,
-      "ports_count": 2,
-      "active_now": 0,
-      "total_sessions_24h": 0,
-      "total_kwh_24h": 0.0,
-      "total_duration_min": 0.0,
-      "utilization_pct": 0.0
-    },
-    {
-      "station_id": "ST-8380",
-      "name": "RAJENDRA fuel center",
-      "cpo": "BPCL",
-      "location": "Pune / PCMC Corridor",
-      "latitude": 18.48928,
-      "longitude": 74.03609,
       "ports_count": 2,
       "active_now": 0,
       "total_sessions_24h": 0,
@@ -1865,6 +1851,20 @@
       "latitude": 18.576309,
       "longitude": 73.764862,
       "ports_count": 16,
+      "active_now": 0,
+      "total_sessions_24h": 0,
+      "total_kwh_24h": 0.0,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
+    },
+    {
+      "station_id": "ST-17037",
+      "name": "MIT-ADT University, Loni Kalbhor Pune",
+      "cpo": "goEgo Network",
+      "location": "MIT ADT University Loni Kalbhor",
+      "latitude": 18.495016,
+      "longitude": 74.022347,
+      "ports_count": 24,
       "active_now": 0,
       "total_sessions_24h": 0,
       "total_kwh_24h": 0.0,
@@ -3622,20 +3622,6 @@
       "utilization_pct": 0.0
     },
     {
-      "station_id": "ST-14129",
-      "name": "Building 2 - 4W",
-      "cpo": "Statiq",
-      "location": "Phursungi, Pune, Maharashtra 412308, India",
-      "latitude": 18.490864,
-      "longitude": 73.951992,
-      "ports_count": 1,
-      "active_now": 0,
-      "total_sessions_24h": 0,
-      "total_kwh_24h": 0.0,
-      "total_duration_min": 0.0,
-      "utilization_pct": 0.0
-    },
-    {
       "station_id": "ST-14184",
       "name": "SUPREME ESTIA 4W-03",
       "cpo": "Statiq",
@@ -4630,6 +4616,20 @@
       "utilization_pct": 0.0
     },
     {
+      "station_id": "TP-Nayara_Morya_Transport_Terminus_MIDC_Bhosari",
+      "name": "Morya Transport Terminus MIDC Bhosari Charging Station",
+      "cpo": "Tata Power EZ Charge",
+      "location": "Pune, Maharashtra",
+      "latitude": 18.621396,
+      "longitude": 73.8384375,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 0,
+      "total_kwh_24h": 0.0,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
+    },
+    {
       "station_id": "TP-Others_Datson_Electronics_Gorhe_Pune",
       "name": "Datson Electronics, Gorhe",
       "cpo": "Tata Power EZ Charge",
@@ -5008,6 +5008,20 @@
       "utilization_pct": 0.0
     },
     {
+      "station_id": "TP-TML_TML_Shaw_Motors_Workshop_Mundhwa",
+      "name": "TML Shaw Motors Workshop, Mundhwa",
+      "cpo": "Tata Power EZ Charge",
+      "location": "PUNE, Maharashtra",
+      "latitude": 18.528884,
+      "longitude": 73.934355,
+      "ports_count": 2,
+      "active_now": 0,
+      "total_sessions_24h": 0,
+      "total_kwh_24h": 0.0,
+      "total_duration_min": 0.0,
+      "utilization_pct": 0.0
+    },
+    {
       "station_id": "TP-TPC_CP_Kumar_Prospera_Cooperative_Housing_Society_Ltd",
       "name": "Kumar Prospera Cooperative Housing Society Ltd (Private Charger)",
       "cpo": "Tata Power EZ Charge",
@@ -5099,20 +5113,6 @@
       "latitude": 18.519954,
       "longitude": 73.876705,
       "ports_count": 4,
-      "active_now": 0,
-      "total_sessions_24h": 0,
-      "total_kwh_24h": 0.0,
-      "total_duration_min": 0.0,
-      "utilization_pct": 0.0
-    },
-    {
-      "station_id": "TP-TPC_CP_Pruthviraj_Shantilal_Luniya",
-      "name": "Pruthviraj Shantilal Luniya",
-      "cpo": "Tata Power EZ Charge",
-      "location": "PUNE, Maharashtra",
-      "latitude": 18.532688,
-      "longitude": 73.939159,
-      "ports_count": 1,
       "active_now": 0,
       "total_sessions_24h": 0,
       "total_kwh_24h": 0.0,
@@ -5411,8 +5411,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 21.0,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -5784,8 +5784,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 21.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -5801,9 +5801,9 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 21.99,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         }
@@ -5826,14 +5826,14 @@
           "total_guns_on_cabinet": 2,
           "label": "PUN0012 - Gun 1",
           "port_label": "PUN0012 - Gun 1",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 21.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         },
         {
           "port_key": "ST_10761_P2",
@@ -5843,14 +5843,14 @@
           "total_guns_on_cabinet": 2,
           "label": "PUN0012 - Gun 2",
           "port_label": "PUN0012 - Gun 2",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 21.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         },
         {
           "port_key": "ST_10761_P3",
@@ -5880,8 +5880,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 21.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -5909,8 +5909,8 @@
           "power_kw": 120.0,
           "rate_inr": 21.99,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
+          "duration": "26m 43s",
+          "kwh": "28.9 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         },
@@ -5943,8 +5943,8 @@
           "power_kw": 120.0,
           "rate_inr": 21.99,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
+          "duration": "26m 43s",
+          "kwh": "28.9 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         },
@@ -5988,8 +5988,8 @@
           "power_kw": 60.0,
           "rate_inr": 24.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -6004,9 +6004,9 @@
           "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 24.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -6021,9 +6021,9 @@
           "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 24.0,
-          "status": "CHARGING",
-          "duration": "19h 21m",
-          "kwh": "40.5 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -6066,7 +6066,7 @@
           "type": "CCS-2 (180.0kW)",
           "power_kw": 180.0,
           "rate_inr": 24.0,
-          "status": "AVAILABLE",
+          "status": "FAULTED",
           "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 180.0,
@@ -6083,7 +6083,7 @@
           "type": "CCS-2 (180.0kW)",
           "power_kw": 180.0,
           "rate_inr": 24.0,
-          "status": "AVAILABLE",
+          "status": "FAULTED",
           "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 180.0,
@@ -6101,8 +6101,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "19h 41m",
-          "kwh": "40.6 kWh",
+          "duration": "20h 8m",
+          "kwh": "40.7 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -6125,13 +6125,13 @@
           "total_guns_on_cabinet": 2,
           "label": "TCZ MH | Pune | ONYX 1 - Gun 1",
           "port_label": "TCZ MH | Pune | ONYX 1 - Gun 1",
-          "type": "CCS-2 (120kW / Shared 240kW)",
+          "type": "CCS-2 (240.0kW)",
           "power_kw": 240.0,
           "rate_inr": 22.5,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
-          "allocated_kw": 120.0,
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
+          "allocated_kw": 240.0,
           "effective_kw": 65.0
         },
         {
@@ -6142,13 +6142,13 @@
           "total_guns_on_cabinet": 2,
           "label": "TCZ MH | Pune | ONYX 1 - Gun 2",
           "port_label": "TCZ MH | Pune | ONYX 1 - Gun 2",
-          "type": "CCS-2 (120kW / Shared 240kW)",
+          "type": "CCS-2 (240.0kW)",
           "power_kw": 240.0,
           "rate_inr": 22.5,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
-          "allocated_kw": 120.0,
+          "duration": "26m 43s",
+          "kwh": "28.9 kWh",
+          "allocated_kw": 240.0,
           "effective_kw": 65.0
         }
       ]
@@ -6218,9 +6218,9 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 24.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
+          "status": "FAULTED",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         },
@@ -6235,7 +6235,7 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 24.0,
-          "status": "AVAILABLE",
+          "status": "FAULTED",
           "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
@@ -7776,8 +7776,8 @@
           "power_kw": 90.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
           "allocated_kw": 90.0,
           "effective_kw": 45.0
         },
@@ -7889,7 +7889,7 @@
           "power_kw": 7.0,
           "rate_inr": 18.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -8615,14 +8615,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- WAG Charger 1 - Gun 1",
           "port_label": "SR- WAG Charger 1 - Gun 1",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         },
         {
           "port_key": "ST_11182_P2",
@@ -8632,14 +8632,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- WAG Charger 1 - Gun 2",
           "port_label": "SR- WAG Charger 1 - Gun 2",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         },
         {
           "port_key": "ST_11182_P3",
@@ -8835,14 +8835,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- PIM Charger 1 - Gun 1",
           "port_label": "SR- PIM Charger 1 - Gun 1",
-          "type": "CCS-2 (60kW / Shared 120kW)",
+          "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
-          "allocated_kw": 60.0,
-          "effective_kw": 45.0
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
+          "allocated_kw": 120.0,
+          "effective_kw": 65.0
         },
         {
           "port_key": "ST_11181_P2",
@@ -8852,14 +8852,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- PIM Charger 1 - Gun 2",
           "port_label": "SR- PIM Charger 1 - Gun 2",
-          "type": "CCS-2 (60kW / Shared 120kW)",
+          "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
-          "allocated_kw": 60.0,
-          "effective_kw": 45.0
+          "duration": "26m 43s",
+          "kwh": "28.9 kWh",
+          "allocated_kw": 120.0,
+          "effective_kw": 65.0
         },
         {
           "port_key": "ST_11181_P3",
@@ -9035,8 +9035,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 17.99,
-          "status": "FAULTED",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9052,7 +9052,7 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 17.99,
-          "status": "FAULTED",
+          "status": "AVAILABLE",
           "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
@@ -9097,8 +9097,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 21.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9170,8 +9170,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 21.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9212,14 +9212,14 @@
           "total_guns_on_cabinet": 2,
           "label": "130350 BP COCO RTO - Gun 1",
           "port_label": "130350 BP COCO RTO - Gun 1",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 17.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         },
         {
           "port_key": "ST_8895_P2",
@@ -9229,14 +9229,14 @@
           "total_guns_on_cabinet": 2,
           "label": "130350 BP COCO RTO - Gun 2",
           "port_label": "130350 BP COCO RTO - Gun 2",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 17.99,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         }
       ]
     },
@@ -9278,8 +9278,8 @@
           "power_kw": 120.0,
           "rate_inr": 24.5,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
+          "duration": "26m 43s",
+          "kwh": "28.9 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         }
@@ -9322,9 +9322,9 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 18.49,
-          "status": "CHARGING",
-          "duration": "19h 44m",
-          "kwh": "52.3 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         }
@@ -9457,8 +9457,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9482,14 +9482,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- VAD Charger 1 - Gun 1",
           "port_label": "SR- VAD Charger 1 - Gun 1",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "FAULTED",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         },
         {
           "port_key": "ST_11201_P2",
@@ -9499,14 +9499,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- VAD Charger 1 - Gun 2",
           "port_label": "SR- VAD Charger 1 - Gun 2",
-          "type": "CCS-2 (120.0kW)",
+          "type": "CCS-2 (60kW / Shared 120kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "FAULTED",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
-          "allocated_kw": 120.0,
-          "effective_kw": 65.0
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         }
       ]
     },
@@ -9575,8 +9575,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9620,8 +9620,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 22.5,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9637,7 +9637,7 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 22.5,
-          "status": "FAULTED",
+          "status": "AVAILABLE",
           "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
@@ -9662,14 +9662,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- SUS Charger 1 - Gun 1",
           "port_label": "SR- SUS Charger 1 - Gun 1",
-          "type": "CCS-2 (60kW / Shared 120kW)",
+          "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
-          "allocated_kw": 60.0,
-          "effective_kw": 45.0
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
+          "allocated_kw": 120.0,
+          "effective_kw": 65.0
         },
         {
           "port_key": "ST_11205_P2",
@@ -9679,14 +9679,14 @@
           "total_guns_on_cabinet": 2,
           "label": "SR- SUS Charger 1 - Gun 2",
           "port_label": "SR- SUS Charger 1 - Gun 2",
-          "type": "CCS-2 (60kW / Shared 120kW)",
+          "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 25.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
-          "allocated_kw": 60.0,
-          "effective_kw": 45.0
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
+          "allocated_kw": 120.0,
+          "effective_kw": 65.0
         }
       ]
     },
@@ -9710,8 +9710,8 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 24.99,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
@@ -9727,9 +9727,9 @@
           "type": "CCS-2 (120.0kW)",
           "power_kw": 120.0,
           "rate_inr": 24.99,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.4 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 120.0,
           "effective_kw": 65.0
         }
@@ -10133,8 +10133,8 @@
           "power_kw": 60.0,
           "rate_inr": 25.0,
           "status": "CHARGING",
-          "duration": "117h 22m",
-          "kwh": "60.1 kWh",
+          "duration": "117h 49m",
+          "kwh": "60.2 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -10704,8 +10704,8 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.0 kWh",
+          "duration": "26m 43s",
+          "kwh": "1.8 kWh",
           "allocated_kw": 4.5,
           "effective_kw": 4.1
         },
@@ -10721,8 +10721,8 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.0 kWh",
+          "duration": "26m 43s",
+          "kwh": "1.8 kWh",
           "allocated_kw": 4.5,
           "effective_kw": 4.1
         },
@@ -11524,8 +11524,8 @@
           "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 24.0,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
@@ -12028,8 +12028,8 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.0 kWh",
+          "duration": "26m 43s",
+          "kwh": "2.9 kWh",
           "allocated_kw": 9.0,
           "effective_kw": 6.6
         },
@@ -12491,8 +12491,8 @@
           "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 18.49,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
@@ -12716,7 +12716,7 @@
           "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 16.52,
-          "status": "FAULTED",
+          "status": "AVAILABLE",
           "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
@@ -12762,8 +12762,8 @@
           "power_kw": 60.0,
           "rate_inr": 16.52,
           "status": "CHARGING",
-          "duration": "118h 49m",
-          "kwh": "60.4 kWh",
+          "duration": "119h 15m",
+          "kwh": "60.5 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -12803,14 +12803,14 @@
           "total_guns_on_cabinet": 2,
           "label": "Mitali Service Station - Gun 1",
           "port_label": "Mitali Service Station - Gun 1",
-          "type": "CCS-2 (30kW / Shared 60kW)",
+          "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 14.99,
           "status": "CHARGING",
-          "duration": "20h 3m",
-          "kwh": "30.2 kWh",
-          "allocated_kw": 30.0,
-          "effective_kw": 27.0
+          "duration": "20h 29m",
+          "kwh": "40.8 kWh",
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         },
         {
           "port_key": "ST_15361_P2",
@@ -12820,14 +12820,14 @@
           "total_guns_on_cabinet": 2,
           "label": "Mitali Service Station - Gun 2",
           "port_label": "Mitali Service Station - Gun 2",
-          "type": "CCS-2 (30kW / Shared 60kW)",
+          "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 14.99,
-          "status": "CHARGING",
-          "duration": "19h 8m",
-          "kwh": "30.0 kWh",
-          "allocated_kw": 30.0,
-          "effective_kw": 27.0
+          "status": "FAULTED",
+          "duration": "-",
+          "kwh": "0.0 kWh",
+          "allocated_kw": 60.0,
+          "effective_kw": 45.0
         }
       ]
     },
@@ -12851,9 +12851,9 @@
           "type": "CCS-2 (60.0kW)",
           "power_kw": 60.0,
           "rate_inr": 14.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -13676,7 +13676,7 @@
           "power_kw": 7.0,
           "rate_inr": 22.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -13744,7 +13744,7 @@
           "power_kw": 7.0,
           "rate_inr": 22.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -13923,9 +13923,9 @@
           "type": "CCS-2 (30.0kW)",
           "power_kw": 30.0,
           "rate_inr": 24.99,
-          "status": "CHARGING",
-          "duration": "19h 29m",
-          "kwh": "30.1 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 30.0,
           "effective_kw": 27.0
         }
@@ -14232,8 +14232,8 @@
           "power_kw": 30.0,
           "rate_inr": 14.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.2 kWh",
+          "duration": "26m 43s",
+          "kwh": "12.0 kWh",
           "allocated_kw": 30.0,
           "effective_kw": 27.0
         }
@@ -14695,7 +14695,7 @@
           "power_kw": 14.0,
           "rate_inr": 17.18,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 14.0,
           "effective_kw": 6.6
@@ -15254,7 +15254,7 @@
           "power_kw": 14.0,
           "rate_inr": 25.31,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 14.0,
           "effective_kw": 6.6
@@ -15446,7 +15446,7 @@
           "power_kw": 7.0,
           "rate_inr": 10.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -16039,8 +16039,8 @@
           "power_kw": 14.0,
           "rate_inr": 14.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.0 kWh",
+          "duration": "26m 43s",
+          "kwh": "2.9 kWh",
           "allocated_kw": 14.0,
           "effective_kw": 6.6
         }
@@ -17455,7 +17455,7 @@
           "power_kw": 3.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 3.0,
           "effective_kw": 2.8
@@ -17585,7 +17585,7 @@
           "power_kw": 3.0,
           "rate_inr": 18.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 3.0,
           "effective_kw": 2.8
@@ -17647,7 +17647,7 @@
           "power_kw": 14.0,
           "rate_inr": 19.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 14.0,
           "effective_kw": 6.6
@@ -19450,7 +19450,7 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 4.5,
           "effective_kw": 4.1
@@ -19467,8 +19467,8 @@
           "power_kw": 9.0,
           "rate_inr": 20.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.0 kWh",
+          "duration": "26m 43s",
+          "kwh": "1.8 kWh",
           "allocated_kw": 4.5,
           "effective_kw": 4.1
         }
@@ -20707,7 +20707,7 @@
           "power_kw": 9.0,
           "rate_inr": 13.0,
           "status": "CHARGING",
-          "duration": "118h 49m",
+          "duration": "119h 15m",
           "kwh": "45.0 kWh",
           "allocated_kw": 9.0,
           "effective_kw": 6.6
@@ -21570,8 +21570,8 @@
           "type": "Type-2 (7.0kW)",
           "power_kw": 7.0,
           "rate_inr": 18.64,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 7.0,
           "effective_kw": 6.4
@@ -22249,8 +22249,8 @@
           "type": "Wall (3.0kW)",
           "power_kw": 3.0,
           "rate_inr": 19.0,
-          "status": "CHARGING",
-          "duration": "22s",
+          "status": "AVAILABLE",
+          "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 3.0,
           "effective_kw": 2.8
@@ -23997,8 +23997,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -24194,8 +24194,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -24238,9 +24238,9 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -24705,9 +24705,9 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "CHARGING",
-          "duration": "18h 46m",
-          "kwh": "40.4 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -24851,7 +24851,7 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "FAULTED",
+          "status": "AVAILABLE",
           "duration": "-",
           "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
@@ -24936,8 +24936,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -25132,9 +25132,9 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
@@ -25945,8 +25945,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -27975,9 +27975,9 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "status": "AVAILABLE",
+          "duration": "-",
+          "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         }
@@ -28797,8 +28797,8 @@
           "type": "CCS-2 (60kW)",
           "power_kw": 60.0,
           "rate_inr": 21.0,
-          "status": "AVAILABLE",
-          "duration": "-",
+          "status": "CHARGING",
+          "duration": "0s",
           "kwh": "0.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
@@ -29373,8 +29373,8 @@
           "power_kw": 60.0,
           "rate_inr": 21.0,
           "status": "CHARGING",
-          "duration": "22s",
-          "kwh": "0.3 kWh",
+          "duration": "26m 43s",
+          "kwh": "20.0 kWh",
           "allocated_kw": 60.0,
           "effective_kw": 45.0
         },
