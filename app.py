@@ -2,11 +2,13 @@
 """
 Production Runner for Pune & PCMC EV Grid Command Center
 Runs the background EV telemetry poller daemon and serves the web UI on Render/Cloud.
+Includes Start/Stop telemetry toggle control.
 """
 
 import os
 import sys
 import time
+import json
 import threading
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
@@ -16,6 +18,20 @@ if hasattr(time, 'tzset'):
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE_DIR)
+STATE_FILE = os.path.join(BASE_DIR, "telemetry_state.json")
+
+def get_telemetry_state():
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE) as f:
+                return json.load(f).get("running", True)
+        except Exception:
+            pass
+    return True
+
+def set_telemetry_state(running: bool):
+    with open(STATE_FILE, "w") as f:
+        json.dump({"running": running, "updated_at": time.time()}, f)
 
 def run_poller_daemon():
     """Background worker thread that runs continuous city-wide polling."""
@@ -27,7 +43,6 @@ def run_poller_daemon():
         print(f"[DAEMON] Error: {hinjewadi_daemon.STATIONS_INDEX} missing!", file=sys.stderr)
         return
 
-    import json
     with open(hinjewadi_daemon.STATIONS_INDEX) as f:
         stations_list = [
             s for s in json.load(f)
@@ -35,9 +50,13 @@ def run_poller_daemon():
             and not any(ex in (s.get("name") or s.get("station_name") or "") for ex in hinjewadi_daemon.EXCLUDED_NAMES)
         ]
 
-    print(f"[DAEMON] Poller active. Tracking {len(stations_list)} Statiq hubs + Tata Power + ChargeZone + Jio-bp pulse...")
+    print(f"[DAEMON] Poller active. Tracking {len(stations_list)} verified hubs in Pune & PCMC...")
     
     while True:
+        if not get_telemetry_state():
+            time.sleep(2)
+            continue
+
         try:
             p = hinjewadi_daemon.poll_network_live(stations_list)
             m = p["metrics"]
@@ -47,7 +66,31 @@ def run_poller_daemon():
         time.sleep(20)
 
 class CustomHTTPHandler(SimpleHTTPRequestHandler):
-    """Serve static directory with caching headers disabled for live JSON updates."""
+    """Serve static directory with caching headers disabled and telemetry controls."""
+    def do_GET(self):
+        if self.path == '/api/start_telemetry':
+            set_telemetry_state(True)
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(b'{"status": "started", "running": true}')
+            return
+        elif self.path == '/api/stop_telemetry':
+            set_telemetry_state(False)
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(b'{"status": "stopped", "running": false}')
+            return
+        elif self.path == '/api/telemetry_status':
+            is_running = get_telemetry_state()
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps({"running": is_running}).encode('utf-8'))
+            return
+        super().do_GET()
+
     def end_headers(self):
         if self.path.endswith('.json'):
             self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
@@ -59,11 +102,9 @@ def main():
     port = int(os.environ.get("PORT", 8080))
     host = "0.0.0.0"
 
-    # Start poller in a daemon background thread
     t = threading.Thread(target=run_poller_daemon, daemon=True)
     t.start()
 
-    # Start production HTTP server
     print(f"[SERVER] Starting HTTP server on {host}:{port}...")
     server = ThreadingHTTPServer((host, port), CustomHTTPHandler)
     try:

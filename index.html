@@ -573,6 +573,7 @@
       <span class="badge-live"><span class="pulse-dot"></span> 257 HUBS (1,094 SOCKETS)</span>
     </div>
     <div class="header-controls">
+      <button id="btn-telemetry-toggle" class="btn-action" style="background: #10b981; color: #020617; font-weight: 800; border: 1px solid #34d399; letter-spacing: 0.5px; padding: 6px 14px; box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);" onclick="toggleTelemetry()">▶ START LIVE TELEMETRY</button>
       <span>REFRESH: <span id="last-sync">--:--:--</span></span>
       <button class="btn-action" onclick="refreshData()">REFRESH TELEMETRY</button>
     </div>
@@ -1655,13 +1656,59 @@
       }
     }
 
+    let IS_TELEMETRY_RUNNING = true;
+    async function checkTelemetryStatus() {
+      try {
+        const res = await fetch('/api/telemetry_status');
+        const data = await res.json();
+        IS_TELEMETRY_RUNNING = !!data.running;
+        updateTelemetryButton();
+      } catch (e) {}
+    }
+
+    async function toggleTelemetry() {
+      const btn = document.getElementById("btn-telemetry-toggle");
+      if (!IS_TELEMETRY_RUNNING) {
+        btn.innerText = "⏳ STARTING...";
+        await fetch('/api/start_telemetry');
+        IS_TELEMETRY_RUNNING = true;
+      } else {
+        btn.innerText = "⏳ PAUSING...";
+        await fetch('/api/stop_telemetry');
+        IS_TELEMETRY_RUNNING = false;
+      }
+      updateTelemetryButton();
+      setTimeout(refreshData, 1000);
+    }
+
+    function updateTelemetryButton() {
+      const btn = document.getElementById("btn-telemetry-toggle");
+      if (!btn) return;
+      if (IS_TELEMETRY_RUNNING) {
+        btn.innerText = "⏸ PAUSE TELEMETRY";
+        btn.style.background = "#f43f5e";
+        btn.style.color = "#ffffff";
+        btn.style.border = "1px solid #fb7185";
+        btn.style.boxShadow = "0 0 12px rgba(244, 63, 94, 0.4)";
+      } else {
+        btn.innerText = "▶ START LIVE TELEMETRY";
+        btn.style.background = "#10b981";
+        btn.style.color = "#020617";
+        btn.style.border = "1px solid #34d399";
+        btn.style.boxShadow = "0 0 12px rgba(16, 185, 129, 0.4)";
+      }
+    }
+
     function refreshData() {
       loadLiveTelemetry();
+      checkTelemetryStatus();
     }
 
     // Initial render & 3-second live polling loop
+    checkTelemetryStatus();
     loadLiveTelemetry();
     setInterval(loadLiveTelemetry, 3000);
+    setInterval(checkTelemetryStatus, 5000);
   </script>
 </body>
 </html>
