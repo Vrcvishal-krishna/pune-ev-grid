@@ -1,0 +1,23 @@
+{
+  "auth_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkVWODc3NzcyNjE0MiIsIlVzZXJJZCI6IjM3ODk4MSIsInNpZCI6IjM3ODk4MSIsIkVtYWlsIjoiZHVtbXk4Nzc3NzI2MTQyQGppb2JwMS5jb20iLCJNb2JpbGUiOiI4Nzc3NzI2MTQyIiwiRmlyc3ROYW1lIjoiVmlzaGh1IiwiTGFzdE5hbWUiOiJDaCIsIlVuaXF1ZUlkIjoiYzEwNTAxYTYtYmRjZS00Y2VmLTgxZDItMGNkYTRkZmJhZGVjIiwiTGFzdEFjdGl2aXR5IjoiMTAvMTkvMjAyNiAxMTowMzoyMFBNIiwiQ3VzdElEIjoiMzg0MTM2IiwiUm9sZUlkIjoiMjkiLCJSb2xlS2V5IjoiQ1VTVCIsIm5iZiI6MTc5MjQzMTIwMCwiZXhwIjoxNzkyNDM0ODAwLCJpc3MiOiJQVl9BU1NFVCIsImF1ZCI6IlBWX0FTU0VUIn0.vgKqWqBHwlxn4rfAV7gMlvERxTwse7TVGpZpFcOFnYw",
+  "refresh_Token": "lP9ECkqDhfhHQZeqZ+jf13xBJ2x1KHJW7PSmQ5EfTcEAFZ92BC/NI+2nJRr7NoqbgpKd3sK56TkS4lghGa7i1g==",
+  "expires_In": 3600,
+  "refresh_Expires_In": 432000,
+  "loginOutput": {
+    "userId": 378981,
+    "username": "EV8777726142",
+    "email": "dummy8777726142@jiobp1.com",
+    "mobile": "8777726142",
+    "roles": [
+      {
+        "id": 29,
+        "key": "CUST"
+      }
+    ],
+    "isRedirectToChangePassword": "Y",
+    "alreadyLoggedIn": true,
+    "firstname": "Vishhu",
+    "lastname": "Ch",
+    "uniqueId": "c10501a6-bdce-4cef-81d2-0cda4dfbadec"
+  }
+}

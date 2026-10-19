@@ -474,9 +474,19 @@ def poll_network_live(station_list):
         for t_st in tata_stations:
             LAST_KNOWN_STATIONS[t_st["id"]] = t_st
 
-    # Filter out any legacy static entries from cache
+    # Fetch live official Jio-bp Pulse network in Pune & PCMC
+    try:
+        from jiobp_fetcher import fetch_jiobp_stations
+        jio_stations = fetch_jiobp_stations("pune", is_telemetry_running=True)
+        if jio_stations:
+            for j_st in jio_stations:
+                LAST_KNOWN_STATIONS[j_st["id"]] = j_st
+    except Exception as e:
+        print(f"Jio-bp fetch error: {e}", file=sys.stderr)
+
+    # Filter out any legacy unverified static entries from cache
     for k in list(LAST_KNOWN_STATIONS.keys()):
-        if str(k).startswith("JIO-") or str(k).startswith("CZ-"):
+        if str(k).startswith("CZ-"):
             del LAST_KNOWN_STATIONS[k]
 
     # Unified city-wide snapshot: 100% verified live telemetry across Tata Power and Statiq/BPCL/HPCL/Shell/goEgo
