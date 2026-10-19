@@ -24,10 +24,10 @@ def get_telemetry_state():
     if os.path.exists(STATE_FILE):
         try:
             with open(STATE_FILE) as f:
-                return json.load(f).get("running", True)
+                return json.load(f).get("running", False)
         except Exception:
             pass
-    return True
+    return False
 
 def set_telemetry_state(running: bool):
     with open(STATE_FILE, "w") as f:

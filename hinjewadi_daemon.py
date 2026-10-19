@@ -180,12 +180,12 @@ def fetch_single_station_telemetry(st_meta):
                 raw_c_status = (c.get("connector_status") or "available").upper()
 
                 # Correct classification across Statiq API quirks
-                if st_avail.lower() == "unavailable" or err_msg == "disconnected":
+                if raw_c_status in ["FAULTED", "OFFLINE", "UNAVAILABLE"] or "fault" in err_msg or err_msg == "disconnected" or st_avail.lower() == "unavailable":
                     c_status = "FAULTED"
-                elif c_avail is True:
-                    c_status = "FAULTED" if raw_c_status == "FAULTED" else "AVAILABLE"
-                elif raw_c_status == "CHARGING" or err_msg == "charging":
+                elif raw_c_status in ["CHARGING", "INUSE", "BUSY"] or "charg" in err_msg:
                     c_status = "CHARGING"
+                elif c_avail is True and raw_c_status in ["AVAILABLE", "IDLE", "ONLINE"]:
+                    c_status = "AVAILABLE"
                 else:
                     c_status = "FAULTED"
 
