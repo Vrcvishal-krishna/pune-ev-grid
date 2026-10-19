@@ -135,10 +135,10 @@ def fetch_jiobp_stations(city="pune", is_telemetry_running=False):
         combined = f"{name} {addr}".lower()
 
         if city_lower == "pune":
-            if (18.35 <= lat <= 18.85 and 73.65 <= lng <= 74.15) or "pune" in combined:
+            if (18.25 <= lat <= 18.90 and 73.40 <= lng <= 74.30) or any(k in combined for k in ['pune', 'pcmc', 'pimpri', 'chinchwad', 'hinjawadi', 'hinjewadi', 'lonavala', 'chakan', 'talegaon', 'hadapsar', 'wakad', 'baner', 'kothrud', 'viman nagar', 'kharadi', 'bhosari']):
                 target_hubs.append(s)
         elif city_lower == "mumbai":
-            if (18.80 <= lat <= 19.45 and 72.70 <= lng <= 73.25) or any(c in combined for c in ['mumbai', 'navi mumbai', 'thane', 'vashi', 'kalyan', 'bhayandar']):
+            if (18.65 <= lat <= 19.55 and 72.65 <= lng <= 73.35) or any(k in combined for k in ['mumbai', 'navi mumbai', 'thane', 'vashi', 'kalyan', 'bhayandar', 'panvel', 'ulhasnagar', 'dombivli', 'palghar', 'vasai', 'virar', 'raigad', 'khalapur', 'khopoli', 'nerul', 'belapur', 'airoli', 'chembur', 'andheri', 'bandra', 'borivali', 'goregaon', 'malad', 'kurla', 'dadar', 'worli', 'bkc']):
                 target_hubs.append(s)
 
     # Load cached hub model definitions
