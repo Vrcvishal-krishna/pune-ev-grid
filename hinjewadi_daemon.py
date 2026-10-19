@@ -181,20 +181,14 @@ def fetch_single_station_telemetry(st_meta):
                 raw_c_status = (c.get("connector_status") or "").strip().upper()
                 is_active = c.get("is_active", True)
 
-                # Hyper-Strict 200% Fault & Health Evaluation
-                is_faulted = (
-                    not is_connected or
-                    not is_active or
+                # Exact 100% True-to-Life Classifier
+                if (not is_connected or not is_active or 
                     st_avail in ["unavailable", "closed", "maintenance", "offline"] or
                     st_status in ["DEACTIVATED", "FAULTED", "INACTIVE", "OFFLINE"] or
                     p_status in ["DEACTIVATED", "FAULTED", "INACTIVE", "OFFLINE", "MAINTENANCE"] or
-                    raw_c_status in ["FAULTED", "OFFLINE", "UNAVAILABLE", "SUSPENDEDEVSE", "SUSPENDEDEV", "DISCONNECTED", "ERROR"] or
-                    any(term in err_msg for term in ["fault", "error", "disconnect", "offline", "unavail", "trip", "disabled", "maintenance"])
-                )
-
-                if is_faulted:
+                    raw_c_status in ["FAULTED", "OFFLINE", "UNAVAILABLE", "SUSPENDEDEVSE", "SUSPENDEDEV", "DISCONNECTED", "ERROR"]):
                     c_status = "FAULTED"
-                elif raw_c_status in ["CHARGING", "INUSE", "BUSY", "OCCUPIED"] or "charg" in err_msg:
+                elif raw_c_status in ["CHARGING", "INUSE", "BUSY", "OCCUPIED"] or err_msg == "charging":
                     c_status = "CHARGING"
                 elif (c_avail is True or c_avail == "true") and raw_c_status in ["AVAILABLE", "IDLE", "ONLINE", "READY"]:
                     c_status = "AVAILABLE"
