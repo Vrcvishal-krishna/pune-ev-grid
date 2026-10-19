@@ -1,0 +1,517 @@
+{
+  "pune": [
+    {
+      "station_id": "CZ_6957a1dc3b4c655c65b3e1b2",
+      "cz_id": "6957a1dc3b4c655c65b3e1b2",
+      "name": "MH |  Pune | BMW - Bavaria Motors Hadapsar",
+      "brand": "ChargeZone",
+      "address": "Plot no. 25, Near Wanowrie, Hadapsar, Pune, Maharashtra - 411001",
+      "latitude": 18.509136,
+      "longitude": 73.919498,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_667e9e39f5a6545a9f99e1df",
+      "cz_id": "667e9e39f5a6545a9f99e1df",
+      "name": "MH | Pimpri Chinchwad | Guru Krupa Charging Station",
+      "brand": "ChargeZone",
+      "address": "Near Payas Lab ,Dehu,Pune-412109",
+      "latitude": 18.7155,
+      "longitude": 73.766389,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_6ad30e775c1dd42f150c7c7f",
+      "cz_id": "6ad30e775c1dd42f150c7c7f",
+      "name": "MH | Pune | Cilicant EV Station",
+      "brand": "ChargeZone",
+      "address": "Cilicant Private Limited, Gat No. 172, Fulgaon MIDC, Haveli, Pune-412216 ",
+      "latitude": 18.644622156927262,
+      "longitude": 74.01817528599807,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_64758efd1dbf3de0261a6224",
+      "cz_id": "64758efd1dbf3de0261a6224",
+      "name": "MH | Pune | Courtyard by Marriott Pune Chakan",
+      "brand": "ChargeZone",
+      "address": "Plot P-7, Midc, Chakan Industrial Area Phase-1, Talegaon-Chakan Rd, Khalumbre, Maharashtra 410501",
+      "latitude": 18.74439531765762,
+      "longitude": 73.78786232925161,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_64a3beda9d93e0aef497bbab",
+      "cz_id": "64a3beda9d93e0aef497bbab",
+      "name": "MH | Pune | Mahindra Sahyadri Motors",
+      "brand": "ChargeZone",
+      "address": "Sr No 43/01 to 44/1/1 Dehu Road Katraj By-Pass Highway, Near Pashan Sus Over Bridge, Baner, Pune 411 045",
+      "latitude": 18.5496243,
+      "longitude": 73.7722331,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_6aa2e80b9ceae89f59f93873",
+      "cz_id": "6aa2e80b9ceae89f59f93873",
+      "name": "MH | Pune | Silver Star Khadki",
+      "brand": "ChargeZone",
+      "address": "M/s. Raam Autobahn India Pvt. Ltd., Sno. 52 A/2, Mula Road, Holkar Bridge, Khadki, Pune, Maharashtra 411003",
+      "latitude": 18.554081,
+      "longitude": 73.859207,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadefe7",
+      "cz_id": "67e58b552a6dd3b44cadefe7",
+      "name": "3S Service Station",
+      "brand": "ChargeZone",
+      "address": "At Manikbaug Sinhagad Rd . Pune PUNE PUNE 411051",
+      "latitude": 18.4781849,
+      "longitude": 73.8218096,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b562a6dd3b44cadf90b",
+      "cz_id": "67e58b562a6dd3b44cadf90b",
+      "name": "Alfa Autos",
+      "brand": "ChargeZone",
+      "address": "OLD MUMBAI PUNE HIGH WAY KASARWADI PUNE",
+      "latitude": 18.610699,
+      "longitude": 73.818664,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_6991890408d7877d96665892",
+      "cz_id": "6991890408d7877d96665892",
+      "name": "BLW SONA AC L2 7kW",
+      "brand": "ChargeZone",
+      "address": "WASULI CHAKAN PUNE 410501",
+      "latitude": 18.77309,
+      "longitude": 73.75662,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadeca6",
+      "cz_id": "67e58b552a6dd3b44cadeca6",
+      "name": "Bharat Service Centre",
+      "brand": "ChargeZone",
+      "address": " 499/A BHAIROBANALA OPP AFMC PUNE-SHOLAPUR RO",
+      "latitude": 18.506661,
+      "longitude": 73.897857,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b572a6dd3b44cadff44",
+      "cz_id": "67e58b572a6dd3b44cadff44",
+      "name": "D Mello Service Station",
+      "brand": "ChargeZone",
+      "address": "IOC DEALERS 46NAGAR ROADVADGAON SHERRY PUNE 4",
+      "latitude": 18.562423,
+      "longitude": 73.927096,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0f87",
+      "cz_id": "67e58b582a6dd3b44cae0f87",
+      "name": "GANGA AUTO SERVICES-HADAPSAR",
+      "brand": "ChargeZone",
+      "address": "PUNE,,PUNE",
+      "latitude": 18.498827,
+      "longitude": 73.951813,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b592a6dd3b44cae1b67",
+      "cz_id": "67e58b592a6dd3b44cae1b67",
+      "name": "Kajale & Sons",
+      "brand": "ChargeZone",
+      "address": "Shivaji Nagar Near Shivaji Nagar Post Office Shivaji Nagar Pune 411005 ",
+      "latitude": 18.6586797,
+      "longitude": 73.8449527,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b572a6dd3b44cae044e",
+      "cz_id": "67e58b572a6dd3b44cae044e",
+      "name": "M&D Sales & Service",
+      "brand": "ChargeZone",
+      "address": "Indian Oil Dealers 321/A Shankar Sheth Road Pune 411009 ",
+      "latitude": 18.5004341,
+      "longitude": 73.864086,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadeb93",
+      "cz_id": "67e58b552a6dd3b44cadeb93",
+      "name": "Pimple Petroleum",
+      "brand": "ChargeZone",
+      "address": "C S No. 4695 Gat No.29 NH-4 Pimpri Tal- Haveli Dist Pune ",
+      "latitude": 18.6240318,
+      "longitude": 73.7641784,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae08dd",
+      "cz_id": "67e58b582a6dd3b44cae08dd",
+      "name": "Pranav Service Station",
+      "brand": "ChargeZone",
+      "address": "S. NO. 545/7 PUNE SINHAGAD RD PANMALA PUNE ",
+      "latitude": 18.493938,
+      "longitude": 73.835795,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b532a6dd3b44caddfa2",
+      "cz_id": "67e58b532a6dd3b44caddfa2",
+      "name": "SAVANI SERVICE STATION",
+      "brand": "ChargeZone",
+      "address": "INDIAN OIL DEALERS PIMPRI KASARWADI PUNE",
+      "latitude": 18.602027,
+      "longitude": 73.826667,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0b22",
+      "cz_id": "67e58b582a6dd3b44cae0b22",
+      "name": "Scooter Service Station",
+      "brand": "ChargeZone",
+      "address": "Indian Oil Dealers 634 A Stavely Road Pune Pin-411001 ",
+      "latitude": 18.5000866,
+      "longitude": 73.8414269,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0956",
+      "cz_id": "67e58b582a6dd3b44cae0956",
+      "name": "Shri Balaji Petroleum",
+      "brand": "ChargeZone",
+      "address": "Plot No.55 S.No.23 Transport Nagari Nigdi Dist. Pune 411044",
+      "latitude": 18.6647731,
+      "longitude": 73.7679799,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadea19",
+      "cz_id": "67e58b552a6dd3b44cadea19",
+      "name": "Shri Balaji Petroleum.",
+      "brand": "ChargeZone",
+      "address": "Village Uruli Devachi Saswad Road Tal Haveli Dist Pune 412308",
+      "latitude": 18.4561505,
+      "longitude": 73.9564126,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b532a6dd3b44caddf45",
+      "cz_id": "67e58b532a6dd3b44caddf45",
+      "name": "Shri Swami Samarth Auto",
+      "brand": "ChargeZone",
+      "address": "At Post -Kharabwadi Dist - Pune 410501",
+      "latitude": 18.7589449,
+      "longitude": 73.8302894,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b542a6dd3b44cade71b",
+      "cz_id": "67e58b542a6dd3b44cade71b",
+      "name": "Shriram Petroleum",
+      "brand": "ChargeZone",
+      "address": "Indian Oil Dealers Khed Shivapur Baug Dist Pune - 412 205 ",
+      "latitude": 18.3587749,
+      "longitude": 73.8512958,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b572a6dd3b44cae0022",
+      "cz_id": "67e58b572a6dd3b44cae0022",
+      "name": "Sure Petroleum",
+      "brand": "ChargeZone",
+      "address": "KARVE ROADNAL STOP PUNE 411 004. ",
+      "latitude": 18.509879,
+      "longitude": 73.833119,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadef42",
+      "cz_id": "67e58b552a6dd3b44cadef42",
+      "name": "Unique Petroleum",
+      "brand": "ChargeZone",
+      "address": "At Bhima Koregaon Dist. Pune On Pune Nagar Road 412216",
+      "latitude": 18.6507673,
+      "longitude": 74.0576136,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0f5a",
+      "cz_id": "67e58b582a6dd3b44cae0f5a",
+      "name": "Lakshmi Energy and fuel",
+      "brand": "ChargeZone",
+      "address": "Lakshmi Rd, Landge Nagar, Sector No. 3, Bhosari, Pimpri-Chinchwad, Maharashtra",
+      "latitude": 18.63745,
+      "longitude": 73.849839,
+      "is_chargezone_direct": true
+    }
+  ],
+  "mumbai": [
+    {
+      "station_id": "CZ_68b91ba4e4f99a3c3d2e72e2",
+      "cz_id": "68b91ba4e4f99a3c3d2e72e2",
+      "name": "MH |  Navi Mumbai | Chalo-Taloja",
+      "brand": "ChargeZone",
+      "address": "MIDC Rd, Taloja, Navi Mumbai, Maharashtra 410208",
+      "latitude": 19.058167,
+      "longitude": 73.107972,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_678e26a69d0bdde604dca85f",
+      "cz_id": "678e26a69d0bdde604dca85f",
+      "name": "MH | Mumbai | Arsh Hyundai",
+      "brand": "ChargeZone",
+      "address": "Ground Floor, Godrej Coliseum, Somaiya Hospital Rd, off Eastern Express Highway, GTB Nagar, Lalbaug, Everard Nagar, Sion, Mumbai, Maharashtra 400022",
+      "latitude": 19.05002295232907,
+      "longitude": 72.8769746163951,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_6603fcf5470532c05c4b3273",
+      "cz_id": "6603fcf5470532c05c4b3273",
+      "name": "MH | Mumbai | NESCO Ltd.(Private)",
+      "brand": "ChargeZone",
+      "address": "Next to Western Express Highway, NESCO, Goregaon, Mumbai, Maharashtra 400063",
+      "latitude": 19.150438,
+      "longitude": 72.854145,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_641a9f6f995a5fcf4dc4d83f",
+      "cz_id": "641a9f6f995a5fcf4dc4d83f",
+      "name": "MH | Mumbai | The Resort Madh",
+      "brand": "ChargeZone",
+      "address": "Aksa Beach 11, Madh - Marve Rd, Malad, Aksa Gaon, W, Mumbai, Maharashtra 400095",
+      "latitude": 19.173022,
+      "longitude": 72.796378,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_65360b05c951b0a5ed2c5d5e",
+      "cz_id": "65360b05c951b0a5ed2c5d5e",
+      "name": "MH | Mumbai | Ultra Fast Charging e-tron hub",
+      "brand": "ChargeZone",
+      "address": "Bandra-Kurla Complex, G Block Road, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.06244430545395,
+      "longitude": 72.86098449511299,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67b307eb5c5e334ec52f0230",
+      "cz_id": "67b307eb5c5e334ec52f0230",
+      "name": "MH | Thane | Modi Mahindra",
+      "brand": "ChargeZone",
+      "address": "Survey No 412, RD, Ashar Compound, Rd Number 27, Wagle Industrial Estate, Thane West, Thane, Maharashtra 400604",
+      "latitude": 19.19444884,
+      "longitude": 72.94649633,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b542a6dd3b44cade5f3",
+      "cz_id": "67e58b542a6dd3b44cade5f3",
+      "name": "Ganaraj Auto Service",
+      "brand": "ChargeZone",
+      "address": "26, Panvel Matheran Rd, Sector 12, New Panvel East, Panvel, Navi Mumbai, Maharashtra 410206 MH",
+      "latitude": 18.9982207,
+      "longitude": 73.1215071,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0e1e",
+      "cz_id": "67e58b582a6dd3b44cae0e1e",
+      "name": "Asha Auto Service",
+      "brand": "ChargeZone",
+      "address": "142 LBS Marg, Kurla West,Mumbai 400070",
+      "latitude": 19.070041,
+      "longitude": 72.8727233,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b5a2a6dd3b44cae1fb7",
+      "cz_id": "67e58b5a2a6dd3b44cae1fb7",
+      "name": "Ashish Services 2",
+      "brand": "ChargeZone",
+      "address": "PLOT NO.A-24-B SECTOR 12,KHARGHAR,NAVI MUMBAI",
+      "latitude": 19.04548,
+      "longitude": 73.064613,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0ae0",
+      "cz_id": "67e58b582a6dd3b44cae0ae0",
+      "name": "Indus Filling Station",
+      "brand": "ChargeZone",
+      "address": "Phase I Salt Pan Village,Anik Wadala Road Wadala Tt,Mumbai 400037",
+      "latitude": 19.0343185,
+      "longitude": 72.8606079,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadeee2",
+      "cz_id": "67e58b552a6dd3b44cadeee2",
+      "name": "Jaai Automobiles",
+      "brand": "ChargeZone",
+      "address": "Jaai Automobiles Mumbai Agra National Highway",
+      "latitude": 19.379165,
+      "longitude": 73.210168,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_6a9965bc87c24f9c42126ba8",
+      "cz_id": "6a9965bc87c24f9c42126ba8",
+      "name": "NBS INTERNATIONAL LTD. (Mahindra Dealership)",
+      "brand": "ChargeZone",
+      "address": "CTS 94A, Kamani Oil Mill Lane, Saki Vihar Road, Yadav Nagar, Chandivali, Andheri East, Mumbai",
+      "latitude": 19.109494,
+      "longitude": 72.890513,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_6964d5e3b7968d03c4cf6de3",
+      "cz_id": "6964d5e3b7968d03c4cf6de3",
+      "name": "Palazzo 90 Charger 1",
+      "brand": "ChargeZone",
+      "address": "Ghatkopar (E, Mumbai, Maharashtra",
+      "latitude": 19.1279771,
+      "longitude": 72.8401864,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b542a6dd3b44cade87d",
+      "cz_id": "67e58b542a6dd3b44cade87d",
+      "name": "Rajendra services",
+      "brand": "ChargeZone",
+      "address": "OSHIWARA,OSHIWARA,MUMBAI 400103",
+      "latitude": 19.143271,
+      "longitude": 72.831004,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadf0b1",
+      "cz_id": "67e58b552a6dd3b44cadf0b1",
+      "name": "Satyashanti Auto Service (Dahisar)",
+      "brand": "ChargeZone",
+      "address": "IOC Dealers, Dahisar,Mumbai 400068",
+      "latitude": 19.2537475,
+      "longitude": 72.864142,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0da1",
+      "cz_id": "67e58b582a6dd3b44cae0da1",
+      "name": "Vashi Petroleum",
+      "brand": "ChargeZone",
+      "address": "Sector No. 18,Plot No 42 Vashi,Vashi, Navi Mumbai 700705",
+      "latitude": 19.0811695,
+      "longitude": 72.9966676,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b5a2a6dd3b44cae22e5",
+      "cz_id": "67e58b5a2a6dd3b44cae22e5",
+      "name": "Thane Fuel Station",
+      "brand": "ChargeZone",
+      "address": "A-93 Waghale Indl. Estate, Thane MIDC,Tahne ",
+      "latitude": 19.193949,
+      "longitude": 72.9494021,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44cadeffc",
+      "cz_id": "67e58b552a6dd3b44cadeffc",
+      "name": "Murlidhar Automobiles",
+      "brand": "ChargeZone",
+      "address": "81/1, Chene village On Thane Ghodbunder Road ",
+      "latitude": 19.28,
+      "longitude": 72.926111,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b5a2a6dd3b44cae22e0",
+      "cz_id": "67e58b5a2a6dd3b44cae22e0",
+      "name": "New Bombay Petroleum Centre",
+      "brand": "ChargeZone",
+      "address": "IOC Dealers (Lock No.21010),Plot No 2 Vashi Turbhe,Thane 400705",
+      "latitude": 19.0682379,
+      "longitude": 73.0078826,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b552a6dd3b44caded32",
+      "cz_id": "67e58b552a6dd3b44caded32",
+      "name": "Royal Auto Service",
+      "brand": "ChargeZone",
+      "address": "KALYAN BHIVANDI ROAD THANE ",
+      "latitude": 19.2532,
+      "longitude": 73.09808,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b582a6dd3b44cae0f00",
+      "cz_id": "67e58b582a6dd3b44cae0f00",
+      "name": "Shiv Sneha Petroleum",
+      "brand": "ChargeZone",
+      "address": "GUT NO 52/1B AND 52/5,BHAYANDERPADA,THANE ",
+      "latitude": 19.283981,
+      "longitude": 72.947258,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b542a6dd3b44cade42b",
+      "cz_id": "67e58b542a6dd3b44cade42b",
+      "name": "Harekrishna Petroleum",
+      "brand": "ChargeZone",
+      "address": "AAMANE ON PADGA KALYAN ROAD,SH46 TAL BHIWANDI",
+      "latitude": 19.319267,
+      "longitude": 73.159816,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b542a6dd3b44cade470",
+      "cz_id": "67e58b542a6dd3b44cade470",
+      "name": "Balaji Automobiles",
+      "brand": "ChargeZone",
+      "address": "MIDC Truck Terminal, Patalganga,Taluka Panvel, Rasayani, Raigad",
+      "latitude": 18.8869686,
+      "longitude": 73.1723063,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_6aa585bc5888a23c785fdc19",
+      "cz_id": "6aa585bc5888a23c785fdc19",
+      "name": "LEVICON09",
+      "brand": "ChargeZone",
+      "address": "Cluster_panvel_139, Loknete D B Patil Nagar, HOC Colony, Panvel, Maharashtra 410206, India",
+      "latitude": 18.9926634,
+      "longitude": 73.1058866,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b542a6dd3b44cade623",
+      "cz_id": "67e58b542a6dd3b44cade623",
+      "name": "Shree Kedarnath Petroleum",
+      "brand": "ChargeZone",
+      "address": " Panveldist.Raigadmaharashtra,Village Kiravali, Raigad Pin-410210",
+      "latitude": 19.1091987,
+      "longitude": 73.0658871,
+      "is_chargezone_direct": true
+    },
+    {
+      "station_id": "CZ_67e58b5a2a6dd3b44cae2244",
+      "cz_id": "67e58b5a2a6dd3b44cae2244",
+      "name": "Sri Balaji Petroleum",
+      "brand": "ChargeZone",
+      "address": "POYANJE POST BARVAL TALUKA PANVEL NH - 4 DIST RAIGAD",
+      "latitude": 18.93839,
+      "longitude": 73.189503,
+      "is_chargezone_direct": true
+    }
+  ],
+  "discovered_at": 1792452689.512316
+}
