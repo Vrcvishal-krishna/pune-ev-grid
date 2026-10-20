@@ -67,7 +67,24 @@ def run_poller_daemon():
 
 class CustomHTTPHandler(SimpleHTTPRequestHandler):
     """Serve static directory with caching headers disabled and telemetry controls."""
+    def do_HEAD(self):
+        """Handle HEAD requests with zero body (ideal for cron-job.org and ping monitors)."""
+        self.send_response(200)
+        self.send_header('Content-Type', 'text/plain')
+        self.send_header('Content-Length', '2')
+        self.end_headers()
+
     def do_GET(self):
+        # Zero-overhead keepalive for cron-job.org and ping monitors
+        ua = self.headers.get('User-Agent', '').lower()
+        if self.path in ['/health', '/ping', '/healthz', '/status'] or 'cron-job' in ua:
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/plain')
+            self.send_header('Content-Length', '2')
+            self.end_headers()
+            self.wfile.write(b'OK')
+            return
+
         if self.path == '/api/start_telemetry':
             set_telemetry_state(True)
             self.send_response(200)
@@ -92,11 +109,11 @@ class CustomHTTPHandler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def end_headers(self):
-        if self.path.endswith('.json'):
-            self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
-            self.send_header('Pragma', 'no-cache')
-            self.send_header('Expires', '0')
+        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+        self.send_header('Pragma', 'no-cache')
+        self.send_header('Expires', '0')
         super().end_headers()
+
 
 def main():
     port = int(os.environ.get("PORT", 8080))
